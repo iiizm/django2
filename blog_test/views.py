@@ -26,6 +26,14 @@ font_name = font_manager.FontProperties(fname="/usr/share/fonts/truetype/nanum/N
 rc('font', family=font_name)
 
 # Create your views here.
+def main(request):
+
+    return render(request, 'blog_test/main.html')
+
+def main2(request):
+
+    return render(request, 'blog_test/main2.html')
+
 def menu(request):
 
     return render(request, 'blog_test/menu.html')

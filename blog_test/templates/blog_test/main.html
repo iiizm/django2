@@ -1,0 +1,183 @@
+<html>
+<meta charset="UTF-8">
+
+<head>
+  <title>
+    한국 사회 데이터과학 연구원
+  </title>
+  <style type="text/css">
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    height: 100%;
+    background: rgb(0, 32, 96);
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /*margin: 80px auto;*/
+    /*border: 1px solid #bcbcbc;*/
+  }
+
+  .leftbox {
+    display: inline-block;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    float: left;
+    color: white;
+    /*/border: 1px solid #bcbcbc;*/
+  }
+
+  .left_text_box_1 {
+    position: absolute;
+    width: 650px;
+    height: 550px;
+    top: 10%;
+    left: 50%;
+    margin-left: -325px;
+    /*border: 1px solid #bcbcbc;*/
+
+  }
+
+  .lefttext_1 {
+    font-family: Cambria Math;
+    font-size: 120px;
+  }
+
+  .left_text_box_2 {
+    position: absolute;
+    bottom: 1%;
+    left: 5%;
+    /*border: 1px solid #bcbcbc;*/
+
+  }
+  .lefttext_2 {
+    font-family: Cambria Math;
+    font-size: 20px;
+  }
+
+  .rightbox {
+    display: inline-block;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    float: left;
+    /*/border: 1px solid #bcbcbc;*/
+  }
+
+  .rightbox_inner {
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    left: 0;
+    background: rgb(179, 189, 208);
+    /*/border: 1px solid #bcbcbc;*/
+  }
+
+  .right_text_box_1 {
+    font-family: Malgun Gothic;
+    position: absolute;
+    text-align: center;
+    width: 550px;
+    height: 600px;
+    top: 10%;
+    left: 50%;
+    margin-left: -275px;
+    /*border: 1px solid black;*/
+  }
+
+  .righttext_1 {
+    font-size: 40px;
+    font-weight: 900;
+  }
+
+  .righttext_2 {
+    font-size: 20pt;
+    font-weight: 600;
+  }
+
+  .righttext_3 {
+    font-size: 16pt;
+    font-weight: 400;
+  }
+
+  .right_btn_box {
+    position: absolute;
+    width: 150px;
+    height: 70px;
+    bottom: 10%;
+    left: 50%;
+    margin-left: -75px;
+  }
+
+  .btn_text {
+    color: white;
+    font-size: 25pt;
+    font-weight: 700;
+  }
+
+  .btn {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    background-color: rgb(0, 176, 240);
+    border-color: rgb(0, 176, 240);
+    border-style: solid;
+    box-shadow: 0 3px 4px 0 rgb(107, 97, 103);
+  }
+
+  .btn:hover {
+    box-shadow: 0 15px 12px 0 rgb(107, 97, 103);
+  }
+
+  .btn:active {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    box-shadow: 0 9px 7px 0 rgb(107, 97, 103);
+  }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="leftbox">
+      <div class="left_text_box_1">
+        <span class="lefttext_1">Korea<br />Social<br />Data Science<br />Institute</span>
+      </div>
+      <div class="left_text_box_2">
+        <span class="lefttext_2">한국 사회 데이터과학 연구원 ㈜<br /><br />대전광역시 서구 배재로 155-40 21세기관 342호<br />연락처: 042-520-5348 / 010-4300-8764 / bloodia00@hanmail.net</span>
+      </div>
+
+    </div>
+    <div class="rightbox">
+      <div class="rightbox_inner">
+        <div class="right_text_box_1">
+          <span class="righttext_1"><br />한국 사회 데이터과학 연구원<br /><br /></span>
+          <span class="righttext_2">“데이터과학으로 사회발전에<br />도움이 되고자 합니다.”<br /><br /></span>
+          <span class="righttext_3">
+            한국 사회 데이터과학 연구원(Korea Social Data Science Institute: KSDSI)은 사회 데이터 대상 일반통계 분석과 빅데이터 분석서비스를 제공하는 것을 주요 목적으로 하고 있습니다.<br /><br />
+            이에 기반하여 개인, 중소기업, 교육기관을 대상으로 분석 컨설팅과 분석보고서를 제공하여 데이터과학을 통한 사회발전에 이바지하고자 합니다.
+          </span>
+        </div>
+        <div class="right_btn_box">
+          <a href="{% url 'main2'%}">
+            <button class="btn">
+              <span class="btn_text">START</span>
+            </button>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+</body>

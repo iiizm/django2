@@ -118,10 +118,13 @@
     }
 
     .custom-file-uploader {
+      z-index: 4;
       position: relative;
       display: table-cell;
       text-align: center;
       vertical-align: middle;
+      width: 100%;
+      height: 100%;
     }
 
     .ckbox_group {
@@ -210,6 +213,15 @@
       bottom: 0;
     }
 
+    .freq_img {
+      margin-right: 50px;
+      float: left;
+    }
+
+    .wc_img {
+      float: left;
+    }
+
   </style>
 
 </head>
@@ -271,12 +283,9 @@
       </div>
 
       <div class="plot_box">
-        <div class="freq_box">
-          <img src="data:image/png;base64, {{ img_freq }}" alt="" />
-        </div>
-        <div class="wordcloud_box">
-          <img src="data:image/png;base64, {{ img_wc }}" alt="" />
-        </div>
+        <img src="data:image/png;base64, {{ img_freq }}" alt="" class="freq_img" />
+        <img src="data:image/png;base64, {{ img_wc }}" alt="" class="wc_img" />
+
       </div>
       </div>
 

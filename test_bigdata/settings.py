@@ -25,7 +25,7 @@ SECRET_KEY = '@=a_-0iz^edes=^x$fk&$9c$l1)!$r11ig6enpun1la#^u_g@q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['114.108.167.109', 'www.ksdsi.co.kr']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -77,7 +77,9 @@ WSGI_APPLICATION = 'test_bigdata.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+	'NAME': '/home/django_test/test_bigdata/db.sqlite3',
+
     }
 }
 

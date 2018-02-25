@@ -3,7 +3,9 @@ from . import views
 
 urlpatterns = [
     #url(r'^$', views.post_list, name='post_list'),
-    url(r'^$', views.menu, name='menu'),
+    url(r'^$', views.main, name='main'),
+    url(r'^main2/$$', views.main2, name='main2'),
+    url(r'^menu/$$', views.menu, name='menu'),
     url(r'^setting/$', views.setting, name='setting'),
     url(r'^result/(?P<pk>\d+)/$', views.result_detail, name='result_detail'),
     #url(r'^crawling/list/$', views.crawling_list, name='crawling_list'),
