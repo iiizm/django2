@@ -1,0 +1,295 @@
+{% load staticfiles %}
+<meta charset="UTF-8">
+<html>
+
+<head>
+  <title>
+    분석 결과
+  </title>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      height: 100%;
+      background: rgb(230, 230, 230);
+      font-family: Cambria Math;
+
+    }
+
+    .full {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      /*margin: 80px auto;*/
+      /*border: 1px solid #bcbcbc;*/
+    }
+
+    .header {
+      width: 100%;
+      height: 125px;
+      /*border: 1px solid black;*/
+      float: left;
+      margin-top: 40px;
+      margin-bottom: 10px;
+      background: rgb(0, 32, 96);
+      color: white;
+      display: table;
+    }
+
+    .header_title {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
+
+    .title {
+      font-size: 22pt;
+      font-weight: 900;
+    }
+
+    .title2 {
+      font-size: 15pt;
+    }
+
+    .container {
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 740px;
+      margin-bottom: 10px;
+      padding: 10px;
+    }
+
+    .form_upload {
+      position: relative;
+      float: left;
+      width: 400px;
+      height: 110px;
+      padding: 10px 20px 0;
+      background: #f4f7f8;
+      border-radius: 8px;
+      font-family: Georgia, "Times New Roman", Times, serif;
+    }
+
+    .custom-file-uploader input[type='file'] {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 5;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .input-group {
+      position: absolute;
+      border: 2px solid #dce4ec;
+      width: 300px;
+      height: 30px;
+      left: 50%;
+      margin-left: -150px;
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+    .txtbox {
+      float: left;
+      border: none;
+      width: 200px;
+      height: 30px;
+      padding-left: 10px;
+
+    }
+
+    .input-group-btn {
+      float: left;
+      width: 100px;
+      height: 30px;
+      display: table;
+      color: #34495e;
+      background-color: #dce4ec;
+    }
+
+    .custom-file-uploader {
+      position: relative;
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .ckbox_group {
+      position: absolute;
+      width: 300px;
+      height: 20px;
+      left: 50%;
+      top: 50px;
+      margin-left: -150px;
+    }
+
+    .ckbox {
+      float: left;
+      margin-left: 30px;
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+    .btn_group {
+      position: absolute;
+      width: 100px;
+      height: 30px;
+      left: 50%;
+      top: 80px;
+      margin-left: -50px;
+    }
+
+    .btn_submit {
+      width: 100px;
+      height: 30px;
+      float: left;
+    }
+
+    .download_btn {
+      float: left;
+      margin-left: 10px;
+      width: 180px;
+      height: 116px;
+    }
+
+    .btn_box {
+      width: 180px;
+      height: 53px;
+    }
+
+    .btn_freq {
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      width: 100%;
+      height: 100%;
+      background: #f4f7f8;
+      border-radius: 8px;
+      border-color: transparent;
+      box-shadow: 0 0px 0px 0 rgb(107, 97, 103);
+    }
+
+    .btn:hover {
+      box-shadow: 0 2px 2px 0 rgb(107, 97, 103);
+    }
+
+    .btn:active {
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      box-shadow: 0 1px 1px 0 rgb(107, 97, 103);
+    }
+
+    .plot_box {
+      position: absolute;
+      width: 1290px;
+      height: 620px;
+      bottom: 0;
+    }
+
+    .freq_box {
+      float: left;
+      width: 620px;
+      height: 620px;
+      bottom: 0;
+    }
+
+    .wordcloud_box {
+      float: right;
+      width: 620px;
+      height: 620px;
+      bottom: 0;
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <div class="full">
+    <div class="header">
+      <div class="header_title">
+        <p class="title">
+          빅데이터 분석
+        </p>
+        <p class="title2">
+          분석을 위한 데이터를 업로드하고, 분석을 실시하는 곳입니다.
+        </p>
+      </div>
+    </div>
+
+    <div class="container">
+      <form method="post" enctype="multipart/form-data" class="form_upload">{% csrf_token %}
+
+        <div class="input-group">
+          <input type="text" name="filename" class="txtbox" placeholder="No file selected" readonly>
+          <div class="input-group-btn">
+            <div class="custom-file-uploader">
+              <input type="file" name="csv_file" onchange="this.form.filename.value = this.files[0].name" /> Upload
+            </div>
+          </div>
+        </div>
+
+        <div class="ckbox_group">
+          {% for ckbox in form.ck_freq_wc %}
+          <div class="ckbox">
+            {{ckbox}}
+          </div>
+          {% endfor %}
+        </div>
+
+        <div class="btn_group">
+          <input type="submit" value="분석" class="btn_submit" />
+        </div>
+
+      </form>
+
+      <div class="download_btn">
+        <div class="btn_box btn_freq">
+          <a href="data:image/png;base64, {{ img_freq }}" download="freq.png">
+            <button class="btn">
+              빈도그래프저장
+            </button>
+          </a>
+        </div>
+        <div class="btn_box btn_wc">
+          <a href="data:image/png;base64, {{ img_wc }}" download="wordcloud.png" class="btn_a">
+            <button class="btn">
+              워드클라우드저장
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <div class="plot_box">
+        <div class="freq_box">
+          <img src="data:image/png;base64, {{ img_freq }}" alt="" />
+        </div>
+        <div class="wordcloud_box">
+          <img src="data:image/png;base64, {{ img_wc }}" alt="" />
+        </div>
+      </div>
+      </div>
+
+
+  </div>
+
+
+
+
+
+  {{ html_table|safe }}
+
+
+</body>
+
+</html>

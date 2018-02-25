@@ -1,0 +1,28 @@
+{% load staticfiles %}
+<meta charset="UTF-8">
+<html>
+<head>
+  <title>
+    분석 결과
+  </title>
+  <style type="text/css">
+
+  </style>
+
+</head>
+
+  <body>
+    <form method="post" enctype="multipart/form-data">{% csrf_token %}
+
+    <input type="file" name="csv_file" />
+    <input type="submit" value="Upload" />
+
+</form>
+<img src="data:image/png;base64, {{ img_freq }}" alt="somealt" />
+<a href="data:image/png;base64, {{ img_freq }}" download="myimage">다운로드</a>
+<img src="data:image/png;base64, {{ img_wc }}" alt="somealt" />
+{{ figure_wc|safe }}
+
+{{ html_table|safe }}
+  </body>
+</html>
