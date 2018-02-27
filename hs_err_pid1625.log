@@ -1,0 +1,1111 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007fd6c6434ec8, pid=1625, tid=140560333731584
+#
+# JRE version: OpenJDK Runtime Environment (7.0_151-b01) (build 1.7.0_151-b01)
+# Java VM: OpenJDK 64-Bit Server VM (24.151-b01 mixed mode linux-amd64 compressed oops)
+# Derivative: IcedTea 2.6.11
+# Distribution: Ubuntu 14.04 LTS, package 7u151-2.6.11-2ubuntu0.14.04.1
+# Problematic frame:
+# C  [_jpype.cpython-34m.so+0x25ec8]  JPJavaEnv::NewObjectA(_jclass*, _jmethodID*, jvalue*)+0x38
+#
+# Core dump written. Default location: /home/django_test/test_bigdata/core or core.1625
+#
+# If you would like to submit a bug report, please include
+# instructions on how to reproduce the bug and visit:
+#   http://icedtea.classpath.org/bugzilla
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread is native thread
+
+siginfo:si_signo=SIGSEGV: si_errno=0, si_code=1 (SEGV_MAPERR), si_addr=0x0000000000000000
+
+Registers:
+RAX=0x00007fd6d0cb67c0, RBX=0x00007fd6bcbb2858, RCX=0x0000000000003ca1, RDX=0x000000000099e020
+RSP=0x00007fd6c0c2a940, RBP=0x00007fd6bcb91f50, RSI=0x0000000000000000, RDI=0x000000000099e020
+R8 =0x0000000000000000, R9 =0x0000000000000002, R10=0xcccccccccccccccd, R11=0x0000000000000000
+R12=0x0000000000000000, R13=0x00007fd6c669b6e8, R14=0x00007fd6d0cb67c0, R15=0x00007fd6bcba4050
+RIP=0x00007fd6c6434ec8, EFLAGS=0x0000000000010246, CSGSFS=0x0000000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007fd6c0c2a940)
+0x00007fd6c0c2a940:   0000000000000000 00007fd6bd341030
+0x00007fd6c0c2a950:   00007fd6c0c2ac80 0000000000000000
+0x00007fd6c0c2a960:   0000000000000000 00007fd6bc0397e8
+0x00007fd6c0c2a970:   00007fd6c0c2ac80 00007fd6c0c2ac60
+0x00007fd6c0c2a980:   00007fd6bcc57248 00007fd6c6464d74
+0x00007fd6c0c2a990:   00007fd6bc019878 00007fd6c0c2aa10
+0x00007fd6c0c2a9a0:   0000000000000000 00007fd6bd341030
+0x00007fd6c0c2a9b0:   00007fd6c0c2aa30 00007fd6c0c2aa80
+0x00007fd6c0c2a9c0:   00007fd6bcbb2858 00007fd6c0c2a9f0
+0x00007fd6c0c2a9d0:   00007fd6bd3407a8 00007fd6bd3407a8
+0x00007fd6c0c2a9e0:   00007fd6bd3407a9 00007fd6bd3407a8
+0x00007fd6c0c2a9f0:   00007fd6c6697030 00007fd6bd340fa8
+0x00007fd6c0c2aa00:   00007fd6c88e9d00 0000000000000018
+0x00007fd6c0c2aa10:   00007fd6bd3407a8 00007fd6c88cef50
+0x00007fd6c0c2aa20:   0000000000000006 0000000000000000
+0x00007fd6c0c2aa30:   00007fd6c66976d0 0000000000000000
+0x00007fd6c0c2aa40:   0000000000000000 0000000000000000
+0x00007fd6c0c2aa50:   0000000000000000 0000000000000000
+0x00007fd6c0c2aa60:   0000000000000000 0000000000000000
+0x00007fd6c0c2aa70:   0000000000000000 0000000000000000
+0x00007fd6c0c2aa80:   0000000000000000 0000000000000000
+0x00007fd6c0c2aa90:   0000000000000000 0000000000000000
+0x00007fd6c0c2aaa0:   0000000000000000 0000000000000000
+0x00007fd6c0c2aab0:   0000000000000000 0000000000000000
+0x00007fd6c0c2aac0:   0000000000000000 0000000000000000
+0x00007fd6c0c2aad0:   0000000000000000 00007fd600000008
+0x00007fd6c0c2aae0:   00007fd600000000 00007fd6c88e9de0
+0x00007fd6c0c2aaf0:   0000000000000000 00007fd6c86a0120
+0x00007fd6c0c2ab00:   00007fd6c0c2a9c8 00007fd6c88e9940
+0x00007fd6c0c2ab10:   00007fd6c88e98d0 00007fd6c88e98e0
+0x00007fd6c0c2ab20:   00007fd6c0c2aba0 00007fd6bcc571e0
+0x00007fd6c0c2ab30:   00007fd6bcc57248 0000000000000003 
+
+Instructions: (pc=0x00007fd6c6434ec8)
+0x00007fd6c6434ea8:   89 4c 24 08 e8 af fc ff ff 4c 8b 2d 88 3e 26 00
+0x00007fd6c6434eb8:   49 89 c4 49 8b 7d 00 48 8b 07 ff 50 30 49 89 c6
+0x00007fd6c6434ec8:   49 8b 04 24 48 89 de 4c 89 e7 ff 90 d8 00 00 00
+0x00007fd6c6434ed8:   48 89 c3 48 8b 05 ce 40 26 00 48 8b 38 e8 36 fd 
+
+Register to memory mapping:
+
+RAX=0x00007fd6d0cb67c0 is an unknown value
+RBX=0x00007fd6bcbb2858 is a global jni handle
+RCX=0x0000000000003ca1 is an unknown value
+RDX=0x000000000099e020: <offset 0x59e020> in /home/django_test/testenv/bin/python at 0x0000000000400000
+RSP=0x00007fd6c0c2a940 is pointing into the stack for thread: 0x00007fd6bc04d800
+RBP=0x00007fd6bcb91f50 is an unknown value
+RSI=0x0000000000000000 is an unknown value
+RDI=0x000000000099e020: <offset 0x59e020> in /home/django_test/testenv/bin/python at 0x0000000000400000
+R8 =0x0000000000000000 is an unknown value
+R9 =0x0000000000000002 is an unknown value
+R10=0xcccccccccccccccd is an unknown value
+R11=0x0000000000000000 is an unknown value
+R12=0x0000000000000000 is an unknown value
+R13=0x00007fd6c669b6e8: _ZN5JPEnv6s_HostE+0 in /home/django_test/testenv/lib/python3.4/site-packages/_jpype.cpython-34m.so at 0x00007fd6c640f000
+R14=0x00007fd6d0cb67c0 is an unknown value
+R15=0x00007fd6bcba4050 is a weak global jni handle
+
+
+Stack: [0x00007fd6c042f000,0x00007fd6c0c30000],  sp=0x00007fd6c0c2a940,  free space=8174k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [_jpype.cpython-34m.so+0x25ec8]  JPJavaEnv::NewObjectA(_jclass*, _jmethodID*, jvalue*)+0x38
+
+
+---------------  P R O C E S S  ---------------
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 68096K, used 40007K [0x00000000f0000000, 0x00000000f9b00000, 0x0000000100000000)
+  eden space 65536K, 57% used [0x00000000f0000000,0x00000000f2497368,0x00000000f4000000)
+  from space 2560K, 99% used [0x00000000f4000000,0x00000000f427a8c0,0x00000000f4280000)
+  to   space 13824K, 0% used [0x00000000f8d80000,0x00000000f8d80000,0x00000000f9b00000)
+ ParOldGen       total 41984K, used 22537K [0x00000000d0000000, 0x00000000d2900000, 0x00000000f0000000)
+  object space 41984K, 53% used [0x00000000d0000000,0x00000000d1602570,0x00000000d2900000)
+ PSPermGen       total 21504K, used 9992K [0x00000000c5a00000, 0x00000000c6f00000, 0x00000000d0000000)
+  object space 21504K, 46% used [0x00000000c5a00000,0x00000000c63c20a0,0x00000000c6f00000)
+
+Card table byte_map: [0x00007fd6b75a4000,0x00007fd6b7778000] byte_map_base: 0x00007fd6b6f77000
+
+Polling page: 0x00007fd6dfb51000
+
+Code Cache  [0x00007fd6b7778000, 0x00007fd6b79e8000, 0x00007fd6ba778000)
+ total_blobs=876 nmethods=657 adapters=173 free_code_cache=47841Kb largest_free_block=48955712
+
+Compilation events (10 events):
+Event: 3.159 Thread 0x00007fd6bcb80800 nmethod 672 0x00007fd6b78b1b50 code [0x00007fd6b78b1ca0, 0x00007fd6b78b1d58]
+Event: 3.159 Thread 0x00007fd6bcb80800  673             scala.collection.convert.Wrappers$JMapWrapperLike$$anon$2::ui (5 bytes)
+Event: 3.159 Thread 0x00007fd6bcb80800 nmethod 673 0x00007fd6b78b6b50 code [0x00007fd6b78b6c80, 0x00007fd6b78b6cd8]
+Event: 3.159 Thread 0x00007fd6bcb80800  674             scala.collection.mutable.Builder$class::sizeHint (20 bytes)
+Event: 3.160 Thread 0x00007fd6bcb80800 nmethod 674 0x00007fd6b78b17d0 code [0x00007fd6b78b1920, 0x00007fd6b78b1a18]
+Event: 3.160 Thread 0x00007fd6bcb80800  675             scala.collection.immutable.Vector::length (10 bytes)
+Event: 3.160 Thread 0x00007fd6bcb80800 nmethod 675 0x00007fd6b78b15d0 code [0x00007fd6b78b1700, 0x00007fd6b78b1758]
+Event: 3.160 Thread 0x00007fd6bcb80800  676             java.lang.Object::equals (11 bytes)
+Event: 3.160 Thread 0x00007fd6bcb80800 nmethod 676 0x00007fd6b78b13d0 code [0x00007fd6b78b1500, 0x00007fd6b78b1558]
+Event: 3.170 Thread 0x00007fd6bcb83800 nmethod 669 0x00007fd6b78c58d0 code [0x00007fd6b78c5be0, 0x00007fd6b78c68e0]
+
+GC Heap History (10 events):
+Event: 0.508 GC heap before
+{Heap before GC invocations=1 (full 0):
+ PSYoungGen      total 18944K, used 16384K [0x00000000f0000000, 0x00000000f1500000, 0x0000000100000000)
+  eden space 16384K, 100% used [0x00000000f0000000,0x00000000f1000000,0x00000000f1000000)
+  from space 2560K, 0% used [0x00000000f1280000,0x00000000f1280000,0x00000000f1500000)
+  to   space 2560K, 0% used [0x00000000f1000000,0x00000000f1000000,0x00000000f1280000)
+ ParOldGen       total 41984K, used 0K [0x00000000d0000000, 0x00000000d2900000, 0x00000000f0000000)
+  object space 41984K, 0% used [0x00000000d0000000,0x00000000d0000000,0x00000000d2900000)
+ PSPermGen       total 21504K, used 6998K [0x00000000c5a00000, 0x00000000c6f00000, 0x00000000d0000000)
+  object space 21504K, 32% used [0x00000000c5a00000,0x00000000c60d5948,0x00000000c6f00000)
+Event: 0.514 GC heap after
+Heap after GC invocations=1 (full 0):
+ PSYoungGen      total 18944K, used 2557K [0x00000000f0000000, 0x00000000f2500000, 0x0000000100000000)
+  eden space 16384K, 0% used [0x00000000f0000000,0x00000000f0000000,0x00000000f1000000)
+  from space 2560K, 99% used [0x00000000f1000000,0x00000000f127f638,0x00000000f1280000)
+  to   space 2560K, 0% used [0x00000000f2280000,0x00000000f2280000,0x00000000f2500000)
+ ParOldGen       total 41984K, used 702K [0x00000000d0000000, 0x00000000d2900000, 0x00000000f0000000)
+  object space 41984K, 1% used [0x00000000d0000000,0x00000000d00af840,0x00000000d2900000)
+ PSPermGen       total 21504K, used 6998K [0x00000000c5a00000, 0x00000000c6f00000, 0x00000000d0000000)
+  object space 21504K, 32% used [0x00000000c5a00000,0x00000000c60d5948,0x00000000c6f00000)
+}
+Event: 1.213 GC heap before
+{Heap before GC invocations=2 (full 0):
+ PSYoungGen      total 18944K, used 18941K [0x00000000f0000000, 0x00000000f2500000, 0x0000000100000000)
+  eden space 16384K, 100% used [0x00000000f0000000,0x00000000f1000000,0x00000000f1000000)
+  from space 2560K, 99% used [0x00000000f1000000,0x00000000f127f638,0x00000000f1280000)
+  to   space 2560K, 0% used [0x00000000f2280000,0x00000000f2280000,0x00000000f2500000)
+ ParOldGen       total 41984K, used 702K [0x00000000d0000000, 0x00000000d2900000, 0x00000000f0000000)
+  object space 41984K, 1% used [0x00000000d0000000,0x00000000d00af840,0x00000000d2900000)
+ PSPermGen       total 21504K, used 8606K [0x00000000c5a00000, 0x00000000c6f00000, 0x00000000d0000000)
+  object space 21504K, 40% used [0x00000000c5a00000,0x00000000c6267b68,0x00000000c6f00000)
+Event: 1.221 GC heap after
+Heap after GC invocations=2 (full 0):
+ PSYoungGen      total 35328K, used 2530K [0x00000000f0000000, 0x00000000f2500000, 0x0000000100000000)
+  eden space 32768K, 0% used [0x00000000f0000000,0x00000000f0000000,0x00000000f2000000)
+  from space 2560K, 98% used [0x00000000f2280000,0x00000000f24f8900,0x00000000f2500000)
+  to   space 2560K, 0% used [0x00000000f2000000,0x00000000f2000000,0x00000000f2280000)
+ ParOldGen       total 41984K, used 1951K [0x00000000d0000000, 0x00000000d2900000, 0x00000000f0000000)
+  object space 41984K, 4% used [0x00000000d0000000,0x00000000d01e7ed0,0x00000000d2900000)
+ PSPermGen       total 21504K, used 8606K [0x00000000c5a00000, 0x00000000c6f00000, 0x00000000d0000000)
+  object space 21504K, 40% used [0x00000000c5a00000,0x00000000c6267b68,0x00000000c6f00000)
+}
+Event: 1.640 GC heap before
+{Heap before GC invocations=3 (full 0):
+ PSYoungGen      total 35328K, used 35298K [0x00000000f0000000, 0x00000000f2500000, 0x0000000100000000)
+  eden space 32768K, 100% used [0x00000000f0000000,0x00000000f2000000,0x00000000f2000000)
+  from space 2560K, 98% used [0x00000000f2280000,0x00000000f24f8900,0x00000000f2500000)
+  to   space 2560K, 0% used [0x00000000f2000000,0x00000000f2000000,0x00000000f2280000)
+ ParOldGen       total 41984K, used 1951K [0x00000000d0000000, 0x00000000d2900000, 0x00000000f0000000)
+  object space 41984K, 4% used [0x00000000d0000000,0x00000000d01e7ed0,0x00000000d2900000)
+ PSPermGen       total 21504K, used 8865K [0x00000000c5a00000, 0x00000000c6f00000, 0x00000000d0000000)
+  object space 21504K, 41% used [0x00000000c5a00000,0x00000000c62a8718,0x00000000c6f00000)
+Event: 1.664 GC heap after
+Heap after GC invocations=3 (full 0):
+ PSYoungGen      total 35328K, used 2556K [0x00000000f0000000, 0x00000000f4500000, 0x0000000100000000)
+  eden space 32768K, 0% used [0x00000000f0000000,0x00000000f0000000,0x00000000f2000000)
+  from space 2560K, 99% used [0x00000000f2000000,0x00000000f227f060,0x00000000f2280000)
+  to   space 2560K, 0% used [0x00000000f4280000,0x00000000f4280000,0x00000000f4500000)
+ ParOldGen       total 41984K, used 9174K [0x00000000d0000000, 0x00000000d2900000, 0x00000000f0000000)
+  object space 41984K, 21% used [0x00000000d0000000,0x00000000d08f5a50,0x00000000d2900000)
+ PSPermGen       total 21504K, used 8865K [0x00000000c5a00000, 0x00000000c6f00000, 0x00000000d0000000)
+  object space 21504K, 41% used [0x00000000c5a00000,0x00000000c62a8718,0x00000000c6f00000)
+}
+Event: 1.827 GC heap before
+{Heap before GC invocations=4 (full 0):
+ PSYoungGen      total 35328K, used 35324K [0x00000000f0000000, 0x00000000f4500000, 0x0000000100000000)
+  eden space 32768K, 100% used [0x00000000f0000000,0x00000000f2000000,0x00000000f2000000)
+  from space 2560K, 99% used [0x00000000f2000000,0x00000000f227f060,0x00000000f2280000)
+  to   space 2560K, 0% used [0x00000000f4280000,0x00000000f4280000,0x00000000f4500000)
+ ParOldGen       total 41984K, used 9174K [0x00000000d0000000, 0x00000000d2900000, 0x00000000f0000000)
+  object space 41984K, 21% used [0x00000000d0000000,0x00000000d08f5a50,0x00000000d2900000)
+ PSPermGen       total 21504K, used 8894K [0x00000000c5a00000, 0x00000000c6f00000, 0x00000000d0000000)
+  object space 21504K, 41% used [0x00000000c5a00000,0x00000000c62af928,0x00000000c6f00000)
+Event: 1.843 GC heap after
+Heap after GC invocations=4 (full 0):
+ PSYoungGen      total 68096K, used 2556K [0x00000000f0000000, 0x00000000f4500000, 0x0000000100000000)
+  eden space 65536K, 0% used [0x00000000f0000000,0x00000000f0000000,0x00000000f4000000)
+  from space 2560K, 99% used [0x00000000f4280000,0x00000000f44ff080,0x00000000f4500000)
+  to   space 2560K, 0% used [0x00000000f4000000,0x00000000f4000000,0x00000000f4280000)
+ ParOldGen       total 41984K, used 12006K [0x00000000d0000000, 0x00000000d2900000, 0x00000000f0000000)
+  object space 41984K, 28% used [0x00000000d0000000,0x00000000d0bb9a50,0x00000000d2900000)
+ PSPermGen       total 21504K, used 8894K [0x00000000c5a00000, 0x00000000c6f00000, 0x00000000d0000000)
+  object space 21504K, 41% used [0x00000000c5a00000,0x00000000c62af928,0x00000000c6f00000)
+}
+Event: 2.322 GC heap before
+{Heap before GC invocations=5 (full 0):
+ PSYoungGen      total 68096K, used 68092K [0x00000000f0000000, 0x00000000f4500000, 0x0000000100000000)
+  eden space 65536K, 100% used [0x00000000f0000000,0x00000000f4000000,0x00000000f4000000)
+  from space 2560K, 99% used [0x00000000f4280000,0x00000000f44ff080,0x00000000f4500000)
+  to   space 2560K, 0% used [0x00000000f4000000,0x00000000f4000000,0x00000000f4280000)
+ ParOldGen       total 41984K, used 12006K [0x00000000d0000000, 0x00000000d2900000, 0x00000000f0000000)
+  object space 41984K, 28% used [0x00000000d0000000,0x00000000d0bb9a50,0x00000000d2900000)
+ PSPermGen       total 21504K, used 9643K [0x00000000c5a00000, 0x00000000c6f00000, 0x00000000d0000000)
+  object space 21504K, 44% used [0x00000000c5a00000,0x00000000c636afc8,0x00000000c6f00000)
+Event: 2.353 GC heap after
+Heap after GC invocations=5 (full 0):
+ PSYoungGen      total 68096K, used 2538K [0x00000000f0000000, 0x00000000f9b00000, 0x0000000100000000)
+  eden space 65536K, 0% used [0x00000000f0000000,0x00000000f0000000,0x00000000f4000000)
+  from space 2560K, 99% used [0x00000000f4000000,0x00000000f427a8c0,0x00000000f4280000)
+  to   space 13824K, 0% used [0x00000000f8d80000,0x00000000f8d80000,0x00000000f9b00000)
+ ParOldGen       total 41984K, used 22537K [0x00000000d0000000, 0x00000000d2900000, 0x00000000f0000000)
+  object space 41984K, 53% used [0x00000000d0000000,0x00000000d1602570,0x00000000d2900000)
+ PSPermGen       total 21504K, used 9643K [0x00000000c5a00000, 0x00000000c6f00000, 0x00000000d0000000)
+  object space 21504K, 44% used [0x00000000c5a00000,0x00000000c636afc8,0x00000000c6f00000)
+}
+
+Deoptimization events (10 events):
+Event: 2.381 Thread 0x00007fd6bc04d800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007fd6b77fbfc4 method=java.util.HashMap.getEntry(Ljava/lang/Object;)Ljava/util/HashMap$Entry; @ 71
+Event: 2.431 Thread 0x00007fd6bc04d800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007fd6b7842954 method=java.lang.String.valueOf(Ljava/lang/Object;)Ljava/lang/String; @ 10
+Event: 2.431 Thread 0x00007fd6bc04d800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007fd6b7842954 method=java.lang.String.valueOf(Ljava/lang/Object;)Ljava/lang/String; @ 10
+Event: 2.431 Thread 0x00007fd6bc04d800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007fd6b7842954 method=java.lang.String.valueOf(Ljava/lang/Object;)Ljava/lang/String; @ 10
+Event: 2.432 Thread 0x00007fd6bc04d800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007fd6b7842954 method=java.lang.String.valueOf(Ljava/lang/Object;)Ljava/lang/String; @ 10
+Event: 2.432 Thread 0x00007fd6bc04d800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007fd6b783cb18 method=java.lang.String.valueOf(Ljava/lang/Object;)Ljava/lang/String; @ 10
+Event: 3.108 Thread 0x00007fd6bc04d800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007fd6b78a7904 method=scala.collection.IndexedSeqOptimized$class.isEmpty(Lscala/collection/IndexedSeqOptimized;)Z @ 1
+Event: 3.108 Thread 0x00007fd6bc04d800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007fd6b78a7904 method=scala.collection.IndexedSeqOptimized$class.isEmpty(Lscala/collection/IndexedSeqOptimized;)Z @ 1
+Event: 3.108 Thread 0x00007fd6bc04d800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007fd6b78a7904 method=scala.collection.IndexedSeqOptimized$class.isEmpty(Lscala/collection/IndexedSeqOptimized;)Z @ 1
+Event: 3.108 Thread 0x00007fd6bc04d800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007fd6b78a7904 method=scala.collection.IndexedSeqOptimized$class.isEmpty(Lscala/collection/IndexedSeqOptimized;)Z @ 1
+
+Internal exceptions (10 events):
+Event: 3.103 Thread 0x00007fd6bc04d800 Threw 0x00000000f22e1390 at /build/openjdk-7-O3KmDZ/openjdk-7-7u151-2.6.11/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1322
+Event: 3.103 Thread 0x00007fd6bc04d800 Threw 0x00000000f22ee7b0 at /build/openjdk-7-O3KmDZ/openjdk-7-7u151-2.6.11/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1322
+Event: 3.103 Thread 0x00007fd6bc04d800 Threw 0x00000000f22f3c58 at /build/openjdk-7-O3KmDZ/openjdk-7-7u151-2.6.11/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1322
+Event: 3.104 Thread 0x00007fd6bc04d800 Threw 0x00000000f22f8c48 at /build/openjdk-7-O3KmDZ/openjdk-7-7u151-2.6.11/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1322
+Event: 3.104 Thread 0x00007fd6bc04d800 Threw 0x00000000f22fe750 at /build/openjdk-7-O3KmDZ/openjdk-7-7u151-2.6.11/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1322
+Event: 3.105 Thread 0x00007fd6bc04d800 Threw 0x00000000f23046c8 at /build/openjdk-7-O3KmDZ/openjdk-7-7u151-2.6.11/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1322
+Event: 3.106 Thread 0x00007fd6bc04d800 Threw 0x00000000f230ac60 at /build/openjdk-7-O3KmDZ/openjdk-7-7u151-2.6.11/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1322
+Event: 3.107 Thread 0x00007fd6bc04d800 Threw 0x00000000f2314130 at /build/openjdk-7-O3KmDZ/openjdk-7-7u151-2.6.11/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1322
+Event: 3.108 Thread 0x00007fd6bc04d800 Threw 0x00000000f2319c68 at /build/openjdk-7-O3KmDZ/openjdk-7-7u151-2.6.11/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1322
+Event: 3.109 Thread 0x00007fd6bc04d800 Threw 0x00000000f2320fd0 at /build/openjdk-7-O3KmDZ/openjdk-7-7u151-2.6.11/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1322
+
+Events (10 events):
+Event: 3.112 loading class 0x00007fd69030e860
+Event: 3.112 loading class 0x00007fd69030e860 done
+Event: 3.113 loading class 0x00007fd69030c630
+Event: 3.113 loading class 0x00007fd69030c630 done
+Event: 3.113 loading class 0x00007fd69030e9c0
+Event: 3.113 loading class 0x00007fd69030e9c0 done
+Event: 3.113 loading class 0x00007fd69030ea90
+Event: 3.113 loading class 0x00007fd69030ea90 done
+Event: 4.080 Executing VM operation: EnableBiasedLocking
+Event: 4.080 Executing VM operation: EnableBiasedLocking done
+
+
+Dynamic libraries:
+00400000-006fe000 r-xp 00000000 fd:03 401285                             /home/django_test/testenv/bin/python3.4
+008fe000-008ff000 r--p 002fe000 fd:03 401285                             /home/django_test/testenv/bin/python3.4
+008ff000-0098b000 rw-p 002ff000 fd:03 401285                             /home/django_test/testenv/bin/python3.4
+0098b000-009a7000 rw-p 00000000 00:00 0 
+010ff000-01a26000 rw-p 00000000 00:00 0                                  [heap]
+c5a00000-c6f00000 rw-p 00000000 00:00 0 
+c6f00000-d0000000 rw-p 00000000 00:00 0 
+d0000000-d2900000 rw-p 00000000 00:00 0 
+d2900000-f0000000 rw-p 00000000 00:00 0 
+f0000000-f9b00000 rw-p 00000000 00:00 0 
+f9b00000-100000000 rw-p 00000000 00:00 0 
+7fd6857ff000-7fd6877ff000 rw-p 00000000 00:00 0 
+7fd6877ff000-7fd687800000 ---p 00000000 00:00 0 
+7fd687800000-7fd688000000 rw-p 00000000 00:00 0                          [stack:1654]
+7fd688000000-7fd688021000 rw-p 00000000 00:00 0 
+7fd688021000-7fd68c000000 ---p 00000000 00:00 0 
+7fd68c000000-7fd68c021000 rw-p 00000000 00:00 0 
+7fd68c021000-7fd690000000 ---p 00000000 00:00 0 
+7fd690000000-7fd690982000 rw-p 00000000 00:00 0 
+7fd690982000-7fd694000000 ---p 00000000 00:00 0 
+7fd694000000-7fd694021000 rw-p 00000000 00:00 0 
+7fd694021000-7fd698000000 ---p 00000000 00:00 0 
+7fd698000000-7fd698021000 rw-p 00000000 00:00 0 
+7fd698021000-7fd69c000000 ---p 00000000 00:00 0 
+7fd69c000000-7fd69c413000 rw-p 00000000 00:00 0 
+7fd69c413000-7fd6a0000000 ---p 00000000 00:00 0 
+7fd6a0000000-7fd6a0021000 rw-p 00000000 00:00 0 
+7fd6a0021000-7fd6a4000000 ---p 00000000 00:00 0 
+7fd6a4000000-7fd6a4021000 rw-p 00000000 00:00 0 
+7fd6a4021000-7fd6a8000000 ---p 00000000 00:00 0 
+7fd6a8000000-7fd6a8021000 rw-p 00000000 00:00 0 
+7fd6a8021000-7fd6ac000000 ---p 00000000 00:00 0 
+7fd6ac000000-7fd6ac021000 rw-p 00000000 00:00 0 
+7fd6ac021000-7fd6b0000000 ---p 00000000 00:00 0 
+7fd6b0000000-7fd6b0021000 rw-p 00000000 00:00 0 
+7fd6b0021000-7fd6b4000000 ---p 00000000 00:00 0 
+7fd6b478f000-7fd6b47b6000 r--p 00000000 fd:03 1051096                    /usr/share/locale-langpack/ko/LC_MESSAGES/libc.mo
+7fd6b47b6000-7fd6b4936000 rw-p 00000000 00:00 0 
+7fd6b4936000-7fd6b498e000 r--s 004f0000 fd:03 403864                     /home/django_test/testenv/lib/python3.4/site-packages/konlpy/java/scala-library-2.11.4.jar
+7fd6b498e000-7fd6b4991000 ---p 00000000 00:00 0 
+7fd6b4991000-7fd6b4a8f000 rw-p 00000000 00:00 0                          [stack:1653]
+7fd6b4a8f000-7fd6b4a90000 ---p 00000000 00:00 0 
+7fd6b4a90000-7fd6b4b90000 rw-p 00000000 00:00 0                          [stack:1652]
+7fd6b4b90000-7fd6b4b93000 ---p 00000000 00:00 0 
+7fd6b4b93000-7fd6b4c91000 rw-p 00000000 00:00 0                          [stack:1651]
+7fd6b4c91000-7fd6b4c94000 ---p 00000000 00:00 0 
+7fd6b4c94000-7fd6b4d92000 rw-p 00000000 00:00 0                          [stack:1650]
+7fd6b4d92000-7fd6b4d95000 ---p 00000000 00:00 0 
+7fd6b4d95000-7fd6b4e93000 rw-p 00000000 00:00 0                          [stack:1649]
+7fd6b4e93000-7fd6b4e96000 ---p 00000000 00:00 0 
+7fd6b4e96000-7fd6b4f94000 rw-p 00000000 00:00 0                          [stack:1648]
+7fd6b4f94000-7fd6b4f97000 ---p 00000000 00:00 0 
+7fd6b4f97000-7fd6b5095000 rw-p 00000000 00:00 0                          [stack:1647]
+7fd6b5095000-7fd6b5098000 ---p 00000000 00:00 0 
+7fd6b5098000-7fd6b5196000 rw-p 00000000 00:00 0                          [stack:1646]
+7fd6b5196000-7fd6b5197000 ---p 00000000 00:00 0 
+7fd6b5197000-7fd6b5297000 rw-p 00000000 00:00 0                          [stack:1645]
+7fd6b5297000-7fd6b544c000 r--s 01d66000 fd:03 1071808                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar
+7fd6b544c000-7fd6b734f000 rw-p 00000000 00:00 0 
+7fd6b734f000-7fd6b7350000 ---p 00000000 00:00 0 
+7fd6b7350000-7fd6b7450000 rw-p 00000000 00:00 0                          [stack:1640]
+7fd6b7450000-7fd6b7451000 ---p 00000000 00:00 0 
+7fd6b7451000-7fd6b755c000 rw-p 00000000 00:00 0                          [stack:1638]
+7fd6b755c000-7fd6b75a4000 rw-p 00000000 00:00 0 
+7fd6b75a4000-7fd6b75af000 rw-p 00000000 00:00 0 
+7fd6b75af000-7fd6b75f7000 rw-p 00000000 00:00 0 
+7fd6b75f7000-7fd6b760c000 rw-p 00000000 00:00 0 
+7fd6b760c000-7fd6b76f7000 rw-p 00000000 00:00 0 
+7fd6b76f7000-7fd6b7745000 rw-p 00000000 00:00 0 
+7fd6b7745000-7fd6b7777000 rw-p 00000000 00:00 0 
+7fd6b7777000-7fd6b7778000 rw-p 00000000 00:00 0 
+7fd6b7778000-7fd6b79e8000 rwxp 00000000 00:00 0 
+7fd6b79e8000-7fd6ba778000 rw-p 00000000 00:00 0 
+7fd6ba778000-7fd6ba780000 r-xp 00000000 fd:03 1071840                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libzip.so
+7fd6ba780000-7fd6ba97f000 ---p 00008000 fd:03 1071840                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libzip.so
+7fd6ba97f000-7fd6ba980000 r--p 00007000 fd:03 1071840                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libzip.so
+7fd6ba980000-7fd6ba981000 rw-p 00008000 fd:03 1071840                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libzip.so
+7fd6ba981000-7fd6ba98c000 r-xp 00000000 fd:03 1835260                    /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7fd6ba98c000-7fd6bab8b000 ---p 0000b000 fd:03 1835260                    /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7fd6bab8b000-7fd6bab8c000 r--p 0000a000 fd:03 1835260                    /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7fd6bab8c000-7fd6bab8d000 rw-p 0000b000 fd:03 1835260                    /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7fd6bab8d000-7fd6baba4000 r-xp 00000000 fd:03 1847303                    /lib/x86_64-linux-gnu/libnsl-2.19.so
+7fd6baba4000-7fd6bada3000 ---p 00017000 fd:03 1847303                    /lib/x86_64-linux-gnu/libnsl-2.19.so
+7fd6bada3000-7fd6bada4000 r--p 00016000 fd:03 1847303                    /lib/x86_64-linux-gnu/libnsl-2.19.so
+7fd6bada4000-7fd6bada5000 rw-p 00017000 fd:03 1847303                    /lib/x86_64-linux-gnu/libnsl-2.19.so
+7fd6bada5000-7fd6bada7000 rw-p 00000000 00:00 0 
+7fd6bada7000-7fd6badb0000 r-xp 00000000 fd:03 1847292                    /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7fd6badb0000-7fd6bafaf000 ---p 00009000 fd:03 1847292                    /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7fd6bafaf000-7fd6bafb0000 r--p 00008000 fd:03 1847292                    /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7fd6bafb0000-7fd6bafb1000 rw-p 00009000 fd:03 1847292                    /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7fd6bafb1000-7fd6bafdb000 r-xp 00000000 fd:03 1071861                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjava.so
+7fd6bafdb000-7fd6bb1db000 ---p 0002a000 fd:03 1071861                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjava.so
+7fd6bb1db000-7fd6bb1dc000 r--p 0002a000 fd:03 1071861                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjava.so
+7fd6bb1dc000-7fd6bb1de000 rw-p 0002b000 fd:03 1071861                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjava.so
+7fd6bb1de000-7fd6bbd12000 r-xp 00000000 fd:03 1071866                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7fd6bbd12000-7fd6bbf12000 ---p 00b34000 fd:03 1071866                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7fd6bbf12000-7fd6bbfad000 r--p 00b34000 fd:03 1071866                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7fd6bbfad000-7fd6bbfd0000 rw-p 00bcf000 fd:03 1071866                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7fd6bbfd0000-7fd6bc000000 rw-p 00000000 00:00 0 
+7fd6bc000000-7fd6bdcc4000 rw-p 00000000 00:00 0 
+7fd6bdcc4000-7fd6c0000000 ---p 00000000 00:00 0 
+7fd6c001d000-7fd6c0032000 rw-p 00000000 00:00 0 
+7fd6c0032000-7fd6c011d000 rw-p 00000000 00:00 0 
+7fd6c011d000-7fd6c0127000 rw-p 00000000 00:00 0 
+7fd6c0127000-7fd6c01dd000 rw-p 00000000 00:00 0 
+7fd6c01dd000-7fd6c01ed000 r-xp 00000000 fd:03 1071851                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libverify.so
+7fd6c01ed000-7fd6c03ec000 ---p 00010000 fd:03 1071851                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libverify.so
+7fd6c03ec000-7fd6c03ee000 r--p 0000f000 fd:03 1071851                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libverify.so
+7fd6c03ee000-7fd6c03ef000 rw-p 00011000 fd:03 1071851                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libverify.so
+7fd6c03ef000-7fd6c042f000 rw-p 00000000 00:00 0 
+7fd6c042f000-7fd6c0432000 ---p 00000000 00:00 0 
+7fd6c0432000-7fd6c0c30000 rw-p 00000000 00:00 0                          [stack:1655]
+7fd6c0c30000-7fd6c0c3a000 r-xp 00000000 fd:03 1835241                    /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7fd6c0c3a000-7fd6c0e39000 ---p 0000a000 fd:03 1835241                    /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7fd6c0e39000-7fd6c0e3a000 r--p 00009000 fd:03 1835241                    /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7fd6c0e3a000-7fd6c0e3b000 rw-p 0000a000 fd:03 1835241                    /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7fd6c0e3b000-7fd6c0f3b000 rw-p 00000000 00:00 0 
+7fd6c0f3b000-7fd6c0f54000 r-xp 00000000 fd:03 671952                     /home/django_test/testenv/lib/python3.4/site-packages/wordcloud/query_integral_image.cpython-34m.so
+7fd6c0f54000-7fd6c1153000 ---p 00019000 fd:03 671952                     /home/django_test/testenv/lib/python3.4/site-packages/wordcloud/query_integral_image.cpython-34m.so
+7fd6c1153000-7fd6c1154000 r--p 00018000 fd:03 671952                     /home/django_test/testenv/lib/python3.4/site-packages/wordcloud/query_integral_image.cpython-34m.so
+7fd6c1154000-7fd6c1157000 rw-p 00019000 fd:03 671952                     /home/django_test/testenv/lib/python3.4/site-packages/wordcloud/query_integral_image.cpython-34m.so
+7fd6c1157000-7fd6c1187000 r-xp 00000000 fd:03 671923                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libpng16-4b619e46.so.16.25.0
+7fd6c1187000-7fd6c1387000 ---p 00030000 fd:03 671923                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libpng16-4b619e46.so.16.25.0
+7fd6c1387000-7fd6c1388000 rw-p 00030000 fd:03 671923                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libpng16-4b619e46.so.16.25.0
+7fd6c1388000-7fd6c138c000 rw-p 000e3000 fd:03 671923                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libpng16-4b619e46.so.16.25.0
+7fd6c138c000-7fd6c1436000 r-xp 00000000 fd:03 671930                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libfreetype-0891c94d.so.6.15.0
+7fd6c1436000-7fd6c1636000 ---p 000aa000 fd:03 671930                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libfreetype-0891c94d.so.6.15.0
+7fd6c1636000-7fd6c163e000 rw-p 000aa000 fd:03 671930                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libfreetype-0891c94d.so.6.15.0
+7fd6c163e000-7fd6c1644000 rw-p 00380000 fd:03 671930                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libfreetype-0891c94d.so.6.15.0
+7fd6c1644000-7fd6c1649000 r-xp 00000000 fd:03 671767                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/_imagingft.cpython-34m.so
+7fd6c1649000-7fd6c1849000 ---p 00005000 fd:03 671767                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/_imagingft.cpython-34m.so
+7fd6c1849000-7fd6c184a000 rw-p 00005000 fd:03 671767                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/_imagingft.cpython-34m.so
+7fd6c184a000-7fd6c184c000 rw-p 00015000 fd:03 671767                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/_imagingft.cpython-34m.so
+7fd6c184c000-7fd6c208c000 rw-p 00000000 00:00 0 
+7fd6c208c000-7fd6c20e3000 r-xp 00000000 fd:03 671240                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/backends/_backend_agg.cpython-34m.so
+7fd6c20e3000-7fd6c22e3000 ---p 00057000 fd:03 671240                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/backends/_backend_agg.cpython-34m.so
+7fd6c22e3000-7fd6c22e4000 rw-p 00057000 fd:03 671240                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/backends/_backend_agg.cpython-34m.so
+7fd6c22e4000-7fd6c22e5000 rw-p 00000000 00:00 0 
+7fd6c22e5000-7fd6c22ed000 r-xp 00000000 fd:03 671217                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/backends/_tkagg.cpython-34m.so
+7fd6c22ed000-7fd6c24ec000 ---p 00008000 fd:03 671217                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/backends/_tkagg.cpython-34m.so
+7fd6c24ec000-7fd6c24ed000 rw-p 00007000 fd:03 671217                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/backends/_tkagg.cpython-34m.so
+7fd6c24ed000-7fd6c24ee000 rw-p 00000000 00:00 0 
+7fd6c24ee000-7fd6c2513000 r-xp 00000000 fd:03 1835159                    /lib/x86_64-linux-gnu/libpng12.so.0.50.0
+7fd6c2513000-7fd6c2712000 ---p 00025000 fd:03 1835159                    /lib/x86_64-linux-gnu/libpng12.so.0.50.0
+7fd6c2712000-7fd6c2713000 r--p 00024000 fd:03 1835159                    /lib/x86_64-linux-gnu/libpng12.so.0.50.0
+7fd6c2713000-7fd6c2714000 rw-p 00025000 fd:03 1835159                    /lib/x86_64-linux-gnu/libpng12.so.0.50.0
+7fd6c2714000-7fd6c2719000 r-xp 00000000 fd:03 925450                     /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7fd6c2719000-7fd6c2918000 ---p 00005000 fd:03 925450                     /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7fd6c2918000-7fd6c2919000 r--p 00004000 fd:03 925450                     /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7fd6c2919000-7fd6c291a000 rw-p 00005000 fd:03 925450                     /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7fd6c291a000-7fd6c291c000 r-xp 00000000 fd:03 925448                     /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7fd6c291c000-7fd6c2b1c000 ---p 00002000 fd:03 925448                     /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7fd6c2b1c000-7fd6c2b1d000 r--p 00002000 fd:03 925448                     /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7fd6c2b1d000-7fd6c2b1e000 rw-p 00003000 fd:03 925448                     /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7fd6c2b1e000-7fd6c2b2f000 r-xp 00000000 fd:03 919601                     /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7fd6c2b2f000-7fd6c2d2e000 ---p 00011000 fd:03 919601                     /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7fd6c2d2e000-7fd6c2d2f000 r--p 00010000 fd:03 919601                     /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7fd6c2d2f000-7fd6c2d30000 rw-p 00011000 fd:03 919601                     /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7fd6c2d30000-7fd6c2d39000 r-xp 00000000 fd:03 920095                     /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7fd6c2d39000-7fd6c2f38000 ---p 00009000 fd:03 920095                     /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7fd6c2f38000-7fd6c2f39000 r--p 00008000 fd:03 920095                     /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7fd6c2f39000-7fd6c2f3a000 rw-p 00009000 fd:03 920095                     /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7fd6c2f3a000-7fd6c2fd7000 r-xp 00000000 fd:03 919617                     /usr/lib/x86_64-linux-gnu/libfreetype.so.6.11.1
+7fd6c2fd7000-7fd6c31d6000 ---p 0009d000 fd:03 919617                     /usr/lib/x86_64-linux-gnu/libfreetype.so.6.11.1
+7fd6c31d6000-7fd6c31dc000 r--p 0009c000 fd:03 919617                     /usr/lib/x86_64-linux-gnu/libfreetype.so.6.11.1
+7fd6c31dc000-7fd6c31dd000 rw-p 000a2000 fd:03 919617                     /usr/lib/x86_64-linux-gnu/libfreetype.so.6.11.1
+7fd6c31dd000-7fd6c31fa000 r-xp 00000000 fd:03 925452                     /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7fd6c31fa000-7fd6c33fa000 ---p 0001d000 fd:03 925452                     /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7fd6c33fa000-7fd6c33fb000 r--p 0001d000 fd:03 925452                     /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7fd6c33fb000-7fd6c33fc000 rw-p 0001e000 fd:03 925452                     /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7fd6c33fc000-7fd6c33fe000 r-xp 00000000 fd:03 920231                     /usr/lib/x86_64-linux-gnu/libXss.so.1.0.0
+7fd6c33fe000-7fd6c35fe000 ---p 00002000 fd:03 920231                     /usr/lib/x86_64-linux-gnu/libXss.so.1.0.0
+7fd6c35fe000-7fd6c35ff000 r--p 00002000 fd:03 920231                     /usr/lib/x86_64-linux-gnu/libXss.so.1.0.0
+7fd6c35ff000-7fd6c3600000 rw-p 00003000 fd:03 920231                     /usr/lib/x86_64-linux-gnu/libXss.so.1.0.0
+7fd6c3600000-7fd6c363a000 r-xp 00000000 fd:03 920087                     /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.8.0
+7fd6c363a000-7fd6c3839000 ---p 0003a000 fd:03 920087                     /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.8.0
+7fd6c3839000-7fd6c383b000 r--p 00039000 fd:03 920087                     /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.8.0
+7fd6c383b000-7fd6c383c000 rw-p 0003b000 fd:03 920087                     /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.8.0
+7fd6c383c000-7fd6c3850000 r-xp 00000000 fd:03 920229                     /usr/lib/x86_64-linux-gnu/libXft.so.2.3.1
+7fd6c3850000-7fd6c3a4f000 ---p 00014000 fd:03 920229                     /usr/lib/x86_64-linux-gnu/libXft.so.2.3.1
+7fd6c3a4f000-7fd6c3a50000 r--p 00013000 fd:03 920229                     /usr/lib/x86_64-linux-gnu/libXft.so.2.3.1
+7fd6c3a50000-7fd6c3a51000 rw-p 00014000 fd:03 920229                     /usr/lib/x86_64-linux-gnu/libXft.so.2.3.1
+7fd6c3a51000-7fd6c3b81000 r-xp 00000000 fd:03 925475                     /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7fd6c3b81000-7fd6c3d81000 ---p 00130000 fd:03 925475                     /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7fd6c3d81000-7fd6c3d82000 r--p 00130000 fd:03 925475                     /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7fd6c3d82000-7fd6c3d86000 rw-p 00131000 fd:03 925475                     /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7fd6c3d86000-7fd6c3f10000 r-xp 00000000 fd:03 920224                     /usr/lib/x86_64-linux-gnu/libtcl8.6.so
+7fd6c3f10000-7fd6c410f000 ---p 0018a000 fd:03 920224                     /usr/lib/x86_64-linux-gnu/libtcl8.6.so
+7fd6c410f000-7fd6c411c000 r--p 00189000 fd:03 920224                     /usr/lib/x86_64-linux-gnu/libtcl8.6.so
+7fd6c411c000-7fd6c411d000 rw-p 00196000 fd:03 920224                     /usr/lib/x86_64-linux-gnu/libtcl8.6.so
+7fd6c411d000-7fd6c411e000 rw-p 00000000 00:00 0 
+7fd6c411e000-7fd6c4254000 r-xp 00000000 fd:03 920233                     /usr/lib/x86_64-linux-gnu/libtk8.6.so
+7fd6c4254000-7fd6c4454000 ---p 00136000 fd:03 920233                     /usr/lib/x86_64-linux-gnu/libtk8.6.so
+7fd6c4454000-7fd6c4469000 r--p 00136000 fd:03 920233                     /usr/lib/x86_64-linux-gnu/libtk8.6.so
+7fd6c4469000-7fd6c4472000 rw-p 0014b000 fd:03 920233                     /usr/lib/x86_64-linux-gnu/libtk8.6.so
+7fd6c4472000-7fd6c45b4000 r-xp 00000000 fd:03 937112                     /usr/lib/libBLT.2.5.so.8.6
+7fd6c45b4000-7fd6c47b4000 ---p 00142000 fd:03 937112                     /usr/lib/libBLT.2.5.so.8.6
+7fd6c47b4000-7fd6c47b5000 r--p 00142000 fd:03 937112                     /usr/lib/libBLT.2.5.so.8.6
+7fd6c47b5000-7fd6c47d6000 rw-p 00143000 fd:03 937112                     /usr/lib/libBLT.2.5.so.8.6
+7fd6c47d6000-7fd6c47d7000 rw-p 00000000 00:00 0 
+7fd6c47d7000-7fd6c47e3000 r-xp 00000000 fd:03 937126                     /usr/lib/python3.4/lib-dynload/_tkinter.cpython-34m-x86_64-linux-gnu.so
+7fd6c47e3000-7fd6c49e2000 ---p 0000c000 fd:03 937126                     /usr/lib/python3.4/lib-dynload/_tkinter.cpython-34m-x86_64-linux-gnu.so
+7fd6c49e2000-7fd6c49e3000 r--p 0000b000 fd:03 937126                     /usr/lib/python3.4/lib-dynload/_tkinter.cpython-34m-x86_64-linux-gnu.so
+7fd6c49e3000-7fd6c49e4000 rw-p 0000c000 fd:03 937126                     /usr/lib/python3.4/lib-dynload/_tkinter.cpython-34m-x86_64-linux-gnu.so
+7fd6c49e4000-7fd6c4be4000 rw-p 00000000 00:00 0 
+7fd6c4be4000-7fd6c4c40000 r-xp 00000000 fd:03 406177                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/_qhull.cpython-34m.so
+7fd6c4c40000-7fd6c4e3f000 ---p 0005c000 fd:03 406177                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/_qhull.cpython-34m.so
+7fd6c4e3f000-7fd6c4e41000 rw-p 0005b000 fd:03 406177                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/_qhull.cpython-34m.so
+7fd6c4e41000-7fd6c4e83000 rw-p 00000000 00:00 0 
+7fd6c4e83000-7fd6c4ea2000 r-xp 00000000 fd:03 406216                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/_tri.cpython-34m.so
+7fd6c4ea2000-7fd6c50a1000 ---p 0001f000 fd:03 406216                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/_tri.cpython-34m.so
+7fd6c50a1000-7fd6c50a3000 rw-p 0001e000 fd:03 406216                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/_tri.cpython-34m.so
+7fd6c50a3000-7fd6c5123000 rw-p 00000000 00:00 0 
+7fd6c5123000-7fd6c515e000 r-xp 00000000 fd:03 406175                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/_image.cpython-34m.so
+7fd6c515e000-7fd6c535d000 ---p 0003b000 fd:03 406175                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/_image.cpython-34m.so
+7fd6c535d000-7fd6c535f000 rw-p 0003a000 fd:03 406175                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/_image.cpython-34m.so
+7fd6c535f000-7fd6c53df000 rw-p 00000000 00:00 0 
+7fd6c53df000-7fd6c540f000 r-xp 00000000 fd:03 664606                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/.libs/libpng16-3e9b18e2.so.16.21.0
+7fd6c540f000-7fd6c560e000 ---p 00030000 fd:03 664606                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/.libs/libpng16-3e9b18e2.so.16.21.0
+7fd6c560e000-7fd6c560f000 rw-p 0002f000 fd:03 664606                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/.libs/libpng16-3e9b18e2.so.16.21.0
+7fd6c560f000-7fd6c5613000 rw-p 000df000 fd:03 664606                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/.libs/libpng16-3e9b18e2.so.16.21.0
+7fd6c5613000-7fd6c561b000 r-xp 00000000 fd:03 406198                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/_png.cpython-34m.so
+7fd6c561b000-7fd6c581b000 ---p 00008000 fd:03 406198                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/_png.cpython-34m.so
+7fd6c581b000-7fd6c581c000 rw-p 00008000 fd:03 406198                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/_png.cpython-34m.so
+7fd6c581c000-7fd6c581e000 rw-p 0002f000 fd:03 406198                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/_png.cpython-34m.so
+7fd6c581e000-7fd6c58ee000 r-xp 00000000 fd:03 406190                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/ft2font.cpython-34m.so
+7fd6c58ee000-7fd6c5aed000 ---p 000d0000 fd:03 406190                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/ft2font.cpython-34m.so
+7fd6c5aed000-7fd6c5af5000 rw-p 000cf000 fd:03 406190                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/ft2font.cpython-34m.so
+7fd6c5af5000-7fd6c5e36000 rw-p 00000000 00:00 0 
+7fd6c5e36000-7fd6c5e48000 r-xp 00000000 fd:03 406188                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/_contour.cpython-34m.so
+7fd6c5e48000-7fd6c6048000 ---p 00012000 fd:03 406188                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/_contour.cpython-34m.so
+7fd6c6048000-7fd6c6049000 rw-p 00012000 fd:03 406188                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/_contour.cpython-34m.so
+7fd6c6049000-7fd6c604f000 r-xp 00000000 fd:03 406237                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/_cntr.cpython-34m.so
+7fd6c604f000-7fd6c624e000 ---p 00006000 fd:03 406237                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/_cntr.cpython-34m.so
+7fd6c624e000-7fd6c624f000 rw-p 00005000 fd:03 406237                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/_cntr.cpython-34m.so
+7fd6c624f000-7fd6c640f000 rw-p 00000000 00:00 0 
+7fd6c640f000-7fd6c6497000 r-xp 00000000 fd:03 403419                     /home/django_test/testenv/lib/python3.4/site-packages/_jpype.cpython-34m.so
+7fd6c6497000-7fd6c6696000 ---p 00088000 fd:03 403419                     /home/django_test/testenv/lib/python3.4/site-packages/_jpype.cpython-34m.so
+7fd6c6696000-7fd6c6699000 r--p 00087000 fd:03 403419                     /home/django_test/testenv/lib/python3.4/site-packages/_jpype.cpython-34m.so
+7fd6c6699000-7fd6c669c000 rw-p 0008a000 fd:03 403419                     /home/django_test/testenv/lib/python3.4/site-packages/_jpype.cpython-34m.so
+7fd6c669c000-7fd6c66bd000 r-xp 00000000 fd:03 1835213                    /lib/x86_64-linux-gnu/liblzma.so.5.0.0
+7fd6c66bd000-7fd6c68bc000 ---p 00021000 fd:03 1835213                    /lib/x86_64-linux-gnu/liblzma.so.5.0.0
+7fd6c68bc000-7fd6c68bd000 r--p 00020000 fd:03 1835213                    /lib/x86_64-linux-gnu/liblzma.so.5.0.0
+7fd6c68bd000-7fd6c68be000 rw-p 00021000 fd:03 1835213                    /lib/x86_64-linux-gnu/liblzma.so.5.0.0
+7fd6c68be000-7fd6c68c4000 r-xp 00000000 fd:03 919399                     /usr/lib/python3.4/lib-dynload/_lzma.cpython-34m-x86_64-linux-gnu.so
+7fd6c68c4000-7fd6c6ac3000 ---p 00006000 fd:03 919399                     /usr/lib/python3.4/lib-dynload/_lzma.cpython-34m-x86_64-linux-gnu.so
+7fd6c6ac3000-7fd6c6ac4000 r--p 00005000 fd:03 919399                     /usr/lib/python3.4/lib-dynload/_lzma.cpython-34m-x86_64-linux-gnu.so
+7fd6c6ac4000-7fd6c6ac6000 rw-p 00006000 fd:03 919399                     /usr/lib/python3.4/lib-dynload/_lzma.cpython-34m-x86_64-linux-gnu.so
+7fd6c6ac6000-7fd6c6d06000 rw-p 00000000 00:00 0 
+7fd6c6d06000-7fd6c6d18000 r-xp 00000000 fd:03 407848                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/testing.cpython-34m.so
+7fd6c6d18000-7fd6c6f17000 ---p 00012000 fd:03 407848                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/testing.cpython-34m.so
+7fd6c6f17000-7fd6c6f18000 r--p 00011000 fd:03 407848                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/testing.cpython-34m.so
+7fd6c6f18000-7fd6c6f1a000 rw-p 00012000 fd:03 407848                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/testing.cpython-34m.so
+7fd6c6f1a000-7fd6c6f1b000 r-xp 00000000 fd:03 407751                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/util/_move.cpython-34m.so
+7fd6c6f1b000-7fd6c711b000 ---p 00001000 fd:03 407751                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/util/_move.cpython-34m.so
+7fd6c711b000-7fd6c711c000 r--p 00001000 fd:03 407751                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/util/_move.cpython-34m.so
+7fd6c711c000-7fd6c711d000 rw-p 00002000 fd:03 407751                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/util/_move.cpython-34m.so
+7fd6c711d000-7fd6c7133000 r-xp 00000000 fd:03 407692                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/io/msgpack/_unpacker.cpython-34m.so
+7fd6c7133000-7fd6c7333000 ---p 00016000 fd:03 407692                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/io/msgpack/_unpacker.cpython-34m.so
+7fd6c7333000-7fd6c7334000 r--p 00016000 fd:03 407692                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/io/msgpack/_unpacker.cpython-34m.so
+7fd6c7334000-7fd6c7336000 rw-p 00017000 fd:03 407692                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/io/msgpack/_unpacker.cpython-34m.so
+7fd6c7336000-7fd6c7337000 rw-p 00000000 00:00 0 
+7fd6c7337000-7fd6c7348000 r-xp 00000000 fd:03 407695                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/io/msgpack/_packer.cpython-34m.so
+7fd6c7348000-7fd6c7547000 ---p 00011000 fd:03 407695                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/io/msgpack/_packer.cpython-34m.so
+7fd6c7547000-7fd6c7548000 r--p 00010000 fd:03 407695                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/io/msgpack/_packer.cpython-34m.so
+7fd6c7548000-7fd6c754a000 rw-p 00011000 fd:03 407695                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/io/msgpack/_packer.cpython-34m.so
+7fd6c754a000-7fd6c764a000 rw-p 00000000 00:00 0 
+7fd6c764a000-7fd6c765f000 r-xp 00000000 fd:03 407843                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/json.cpython-34m.so
+7fd6c765f000-7fd6c785e000 ---p 00015000 fd:03 407843                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/json.cpython-34m.so
+7fd6c785e000-7fd6c785f000 r--p 00014000 fd:03 407843                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/json.cpython-34m.so
+7fd6c785f000-7fd6c7860000 rw-p 00015000 fd:03 407843                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/json.cpython-34m.so
+7fd6c7860000-7fd6c78a0000 rw-p 00000000 00:00 0 
+7fd6c78a0000-7fd6c7924000 r-xp 00000000 fd:03 407853                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/parsers.cpython-34m.so
+7fd6c7924000-7fd6c7b23000 ---p 00084000 fd:03 407853                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/parsers.cpython-34m.so
+7fd6c7b23000-7fd6c7b24000 r--p 00083000 fd:03 407853                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/parsers.cpython-34m.so
+7fd6c7b24000-7fd6c7b2a000 rw-p 00084000 fd:03 407853                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/parsers.cpython-34m.so
+7fd6c7b2a000-7fd6c7b6c000 rw-p 00000000 00:00 0 
+7fd6c7b6c000-7fd6c7b81000 r-xp 00000000 fd:03 407859                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/reshape.cpython-34m.so
+7fd6c7b81000-7fd6c7d81000 ---p 00015000 fd:03 407859                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/reshape.cpython-34m.so
+7fd6c7d81000-7fd6c7d82000 r--p 00015000 fd:03 407859                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/reshape.cpython-34m.so
+7fd6c7d82000-7fd6c7d85000 rw-p 00016000 fd:03 407859                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/reshape.cpython-34m.so
+7fd6c7d85000-7fd6c7e05000 rw-p 00000000 00:00 0 
+7fd6c7e05000-7fd6c7ea1000 r-xp 00000000 fd:03 407860                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/groupby.cpython-34m.so
+7fd6c7ea1000-7fd6c80a0000 ---p 0009c000 fd:03 407860                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/groupby.cpython-34m.so
+7fd6c80a0000-7fd6c80a1000 r--p 0009b000 fd:03 407860                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/groupby.cpython-34m.so
+7fd6c80a1000-7fd6c80a7000 rw-p 0009c000 fd:03 407860                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/groupby.cpython-34m.so
+7fd6c80a7000-7fd6c80e8000 rw-p 00000000 00:00 0 
+7fd6c80e8000-7fd6c8188000 r-xp 00000000 fd:03 407857                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/window.cpython-34m.so
+7fd6c8188000-7fd6c8387000 ---p 000a0000 fd:03 407857                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/window.cpython-34m.so
+7fd6c8387000-7fd6c8388000 r--p 0009f000 fd:03 407857                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/window.cpython-34m.so
+7fd6c8388000-7fd6c8390000 rw-p 000a0000 fd:03 407857                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/window.cpython-34m.so
+7fd6c8390000-7fd6c83d1000 rw-p 00000000 00:00 0 
+7fd6c83d1000-7fd6c83e7000 r-xp 00000000 fd:03 1835019                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7fd6c83e7000-7fd6c85e6000 ---p 00016000 fd:03 1835019                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7fd6c85e6000-7fd6c85e7000 rw-p 00015000 fd:03 1835019                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7fd6c85e7000-7fd6c86cd000 r-xp 00000000 fd:03 925650                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19
+7fd6c86cd000-7fd6c88cc000 ---p 000e6000 fd:03 925650                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19
+7fd6c88cc000-7fd6c88d4000 r--p 000e5000 fd:03 925650                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19
+7fd6c88d4000-7fd6c88d6000 rw-p 000ed000 fd:03 925650                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19
+7fd6c88d6000-7fd6c88eb000 rw-p 00000000 00:00 0 
+7fd6c88eb000-7fd6c8919000 r-xp 00000000 fd:03 406244                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/_path.cpython-34m.so
+7fd6c8919000-7fd6c8b19000 ---p 0002e000 fd:03 406244                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/_path.cpython-34m.so
+7fd6c8b19000-7fd6c8b1a000 rw-p 0002e000 fd:03 406244                     /home/django_test/testenv/lib/python3.4/site-packages/matplotlib/_path.cpython-34m.so
+7fd6c8b1a000-7fd6c8e1b000 rw-p 00000000 00:00 0 
+7fd6c8e1b000-7fd6c8e20000 r-xp 00000000 fd:03 919397                     /usr/lib/python3.4/lib-dynload/mmap.cpython-34m-x86_64-linux-gnu.so
+7fd6c8e20000-7fd6c901f000 ---p 00005000 fd:03 919397                     /usr/lib/python3.4/lib-dynload/mmap.cpython-34m-x86_64-linux-gnu.so
+7fd6c901f000-7fd6c9020000 r--p 00004000 fd:03 919397                     /usr/lib/python3.4/lib-dynload/mmap.cpython-34m-x86_64-linux-gnu.so
+7fd6c9020000-7fd6c9021000 rw-p 00005000 fd:03 919397                     /usr/lib/python3.4/lib-dynload/mmap.cpython-34m-x86_64-linux-gnu.so
+7fd6c9021000-7fd6c9061000 rw-p 00000000 00:00 0 
+7fd6c9061000-7fd6c9149000 r-xp 00000000 fd:03 407847                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/sparse.cpython-34m.so
+7fd6c9149000-7fd6c9348000 ---p 000e8000 fd:03 407847                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/sparse.cpython-34m.so
+7fd6c9348000-7fd6c9349000 r--p 000e7000 fd:03 407847                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/sparse.cpython-34m.so
+7fd6c9349000-7fd6c934e000 rw-p 000e8000 fd:03 407847                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/sparse.cpython-34m.so
+7fd6c934e000-7fd6c948f000 rw-p 00000000 00:00 0 
+7fd6c948f000-7fd6c94eb000 r-xp 00000000 fd:03 407851                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/period.cpython-34m.so
+7fd6c94eb000-7fd6c96eb000 ---p 0005c000 fd:03 407851                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/period.cpython-34m.so
+7fd6c96eb000-7fd6c96ec000 r--p 0005c000 fd:03 407851                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/period.cpython-34m.so
+7fd6c96ec000-7fd6c96f3000 rw-p 0005d000 fd:03 407851                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/period.cpython-34m.so
+7fd6c96f3000-7fd6c96f4000 rw-p 00000000 00:00 0 
+7fd6c96f4000-7fd6c9703000 r-xp 00000000 fd:03 407870                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/tslibs/frequencies.cpython-34m.so
+7fd6c9703000-7fd6c9902000 ---p 0000f000 fd:03 407870                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/tslibs/frequencies.cpython-34m.so
+7fd6c9902000-7fd6c9903000 r--p 0000e000 fd:03 407870                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/tslibs/frequencies.cpython-34m.so
+7fd6c9903000-7fd6c9905000 rw-p 0000f000 fd:03 407870                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/tslibs/frequencies.cpython-34m.so
+7fd6c9905000-7fd6c9948000 r-xp 00000000 fd:03 407865                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/tslibs/strptime.cpython-34m.so
+7fd6c9948000-7fd6c9b48000 ---p 00043000 fd:03 407865                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/tslibs/strptime.cpython-34m.so
+7fd6c9b48000-7fd6c9b49000 r--p 00043000 fd:03 407865                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/tslibs/strptime.cpython-34m.so
+7fd6c9b49000-7fd6c9b4e000 rw-p 00044000 fd:03 407865                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/tslibs/strptime.cpython-34m.so
+7fd6c9b4e000-7fd6c9c8f000 rw-p 00000000 00:00 0 
+7fd6c9c8f000-7fd6c9e94000 r-xp 00000000 fd:03 407852                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/join.cpython-34m.so
+7fd6c9e94000-7fd6ca093000 ---p 00205000 fd:03 407852                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/join.cpython-34m.so
+7fd6ca093000-7fd6ca094000 r--p 00204000 fd:03 407852                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/join.cpython-34m.so
+7fd6ca094000-7fd6ca09d000 rw-p 00205000 fd:03 407852                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/join.cpython-34m.so
+7fd6ca09d000-7fd6ca09e000 rw-p 00000000 00:00 0 
+7fd6ca09e000-7fd6ca10f000 r-xp 00000000 fd:03 407855                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/index.cpython-34m.so
+7fd6ca10f000-7fd6ca30e000 ---p 00071000 fd:03 407855                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/index.cpython-34m.so
+7fd6ca30e000-7fd6ca30f000 r--p 00070000 fd:03 407855                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/index.cpython-34m.so
+7fd6ca30f000-7fd6ca315000 rw-p 00071000 fd:03 407855                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/index.cpython-34m.so
+7fd6ca315000-7fd6ca396000 rw-p 00000000 00:00 0 
+7fd6ca396000-7fd6ca3a3000 r-xp 00000000 fd:03 407844                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/hashing.cpython-34m.so
+7fd6ca3a3000-7fd6ca5a2000 ---p 0000d000 fd:03 407844                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/hashing.cpython-34m.so
+7fd6ca5a2000-7fd6ca5a3000 r--p 0000c000 fd:03 407844                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/hashing.cpython-34m.so
+7fd6ca5a3000-7fd6ca5a4000 rw-p 0000d000 fd:03 407844                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/hashing.cpython-34m.so
+7fd6ca5a4000-7fd6ca5a5000 rw-p 00000000 00:00 0 
+7fd6ca5a5000-7fd6ca5b3000 r-xp 00000000 fd:03 407845                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/properties.cpython-34m.so
+7fd6ca5b3000-7fd6ca7b2000 ---p 0000e000 fd:03 407845                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/properties.cpython-34m.so
+7fd6ca7b2000-7fd6ca7b3000 r--p 0000d000 fd:03 407845                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/properties.cpython-34m.so
+7fd6ca7b3000-7fd6ca7b4000 rw-p 0000e000 fd:03 407845                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/properties.cpython-34m.so
+7fd6ca7b4000-7fd6ca875000 rw-p 00000000 00:00 0 
+7fd6ca875000-7fd6ca9c8000 r-xp 00000000 fd:03 407846                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/algos.cpython-34m.so
+7fd6ca9c8000-7fd6cabc7000 ---p 00153000 fd:03 407846                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/algos.cpython-34m.so
+7fd6cabc7000-7fd6cabc8000 r--p 00152000 fd:03 407846                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/algos.cpython-34m.so
+7fd6cabc8000-7fd6cabd4000 rw-p 00153000 fd:03 407846                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/algos.cpython-34m.so
+7fd6cabd4000-7fd6cac16000 rw-p 00000000 00:00 0 
+7fd6cac16000-7fd6cadb0000 r-xp 00000000 fd:03 407854                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/interval.cpython-34m.so
+7fd6cadb0000-7fd6cafaf000 ---p 0019a000 fd:03 407854                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/interval.cpython-34m.so
+7fd6cafaf000-7fd6cafb0000 r--p 00199000 fd:03 407854                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/interval.cpython-34m.so
+7fd6cafb0000-7fd6cafbd000 rw-p 0019a000 fd:03 407854                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/interval.cpython-34m.so
+7fd6cafbd000-7fd6cafbe000 rw-p 00000000 00:00 0 
+7fd6cafbe000-7fd6cb0c1000 r-xp 00000000 fd:03 407849                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/lib.cpython-34m.so
+7fd6cb0c1000-7fd6cb2c0000 ---p 00103000 fd:03 407849                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/lib.cpython-34m.so
+7fd6cb2c0000-7fd6cb2c1000 r--p 00102000 fd:03 407849                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/lib.cpython-34m.so
+7fd6cb2c1000-7fd6cb2d1000 rw-p 00103000 fd:03 407849                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/lib.cpython-34m.so
+7fd6cb2d1000-7fd6cb2d4000 rw-p 00000000 00:00 0 
+7fd6cb2d4000-7fd6cb360000 r-xp 00000000 fd:03 407850                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/hashtable.cpython-34m.so
+7fd6cb360000-7fd6cb55f000 ---p 0008c000 fd:03 407850                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/hashtable.cpython-34m.so
+7fd6cb55f000-7fd6cb560000 r--p 0008b000 fd:03 407850                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/hashtable.cpython-34m.so
+7fd6cb560000-7fd6cb568000 rw-p 0008c000 fd:03 407850                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/hashtable.cpython-34m.so
+7fd6cb568000-7fd6cb569000 rw-p 00000000 00:00 0 
+7fd6cb569000-7fd6cb58a000 r-xp 00000000 fd:03 407867                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/tslibs/fields.cpython-34m.so
+7fd6cb58a000-7fd6cb78a000 ---p 00021000 fd:03 407867                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/tslibs/fields.cpython-34m.so
+7fd6cb78a000-7fd6cb78b000 r--p 00021000 fd:03 407867                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/tslibs/fields.cpython-34m.so
+7fd6cb78b000-7fd6cb78d000 rw-p 00022000 fd:03 407867                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/tslibs/fields.cpython-34m.so
+7fd6cb78d000-7fd6cb7cf000 r-xp 00000000 fd:03 407868                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/tslibs/parsing.cpython-34m.so
+7fd6cb7cf000-7fd6cb9ce000 ---p 00042000 fd:03 407868                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/tslibs/parsing.cpython-34m.so
+7fd6cb9ce000-7fd6cb9cf000 r--p 00041000 fd:03 407868                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/tslibs/parsing.cpython-34m.so
+7fd6cb9cf000-7fd6cb9d4000 rw-p 00042000 fd:03 407868                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/tslibs/parsing.cpython-34m.so
+7fd6cb9d4000-7fd6cb9d5000 rw-p 00000000 00:00 0 
+7fd6cb9d5000-7fd6cd9d5000 rw-p 00000000 00:00 0 
+7fd6cd9d5000-7fd6cfce9000 r-xp 00000000 fd:03 406020                     /home/django_test/testenv/lib/python3.4/site-packages/numpy/.libs/libopenblasp-r0-39a31c03.2.18.so
+7fd6cfce9000-7fd6cfee8000 ---p 02314000 fd:03 406020                     /home/django_test/testenv/lib/python3.4/site-packages/numpy/.libs/libopenblasp-r0-39a31c03.2.18.so
+7fd6cfee8000-7fd6cff07000 rw-p 02313000 fd:03 406020                     /home/django_test/testenv/lib/python3.4/site-packages/numpy/.libs/libopenblasp-r0-39a31c03.2.18.so
+7fd6cff07000-7fd6cff6a000 rw-p 00000000 00:00 0 
+7fd6cff6a000-7fd6d0000000 rw-p 02425000 fd:03 406020                     /home/django_test/testenv/lib/python3.4/site-packages/numpy/.libs/libopenblasp-r0-39a31c03.2.18.so
+7fd6d0000000-7fd6d11e6000 rw-p 00000000 00:00 0 
+7fd6d11e6000-7fd6d4000000 ---p 00000000 00:00 0 
+7fd6d400c000-7fd6d404c000 rw-p 00000000 00:00 0 
+7fd6d404c000-7fd6d4067000 r-xp 00000000 fd:03 407864                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/tslibs/timezones.cpython-34m.so
+7fd6d4067000-7fd6d4266000 ---p 0001b000 fd:03 407864                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/tslibs/timezones.cpython-34m.so
+7fd6d4266000-7fd6d4267000 r--p 0001a000 fd:03 407864                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/tslibs/timezones.cpython-34m.so
+7fd6d4267000-7fd6d4269000 rw-p 0001b000 fd:03 407864                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/tslibs/timezones.cpython-34m.so
+7fd6d4269000-7fd6d4279000 r-xp 00000000 fd:03 407866                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/tslibs/timedeltas.cpython-34m.so
+7fd6d4279000-7fd6d4478000 ---p 00010000 fd:03 407866                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/tslibs/timedeltas.cpython-34m.so
+7fd6d4478000-7fd6d4479000 r--p 0000f000 fd:03 407866                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/tslibs/timedeltas.cpython-34m.so
+7fd6d4479000-7fd6d447b000 rw-p 00010000 fd:03 407866                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/tslibs/timedeltas.cpython-34m.so
+7fd6d447b000-7fd6d459d000 r-xp 00000000 fd:03 407858                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/tslib.cpython-34m.so
+7fd6d459d000-7fd6d479c000 ---p 00122000 fd:03 407858                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/tslib.cpython-34m.so
+7fd6d479c000-7fd6d479d000 r--p 00121000 fd:03 407858                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/tslib.cpython-34m.so
+7fd6d479d000-7fd6d47ac000 rw-p 00122000 fd:03 407858                     /home/django_test/testenv/lib/python3.4/site-packages/pandas/_libs/tslib.cpython-34m.so
+7fd6d47ac000-7fd6d486f000 rw-p 00000000 00:00 0 
+7fd6d486f000-7fd6d492b000 r-xp 00000000 fd:03 405989                     /home/django_test/testenv/lib/python3.4/site-packages/numpy/random/mtrand.cpython-34m.so
+7fd6d492b000-7fd6d4b2b000 ---p 000bc000 fd:03 405989                     /home/django_test/testenv/lib/python3.4/site-packages/numpy/random/mtrand.cpython-34m.so
+7fd6d4b2b000-7fd6d4b50000 rw-p 000bc000 fd:03 405989                     /home/django_test/testenv/lib/python3.4/site-packages/numpy/random/mtrand.cpython-34m.so
+7fd6d4b50000-7fd6d4b92000 rw-p 00000000 00:00 0 
+7fd6d4b92000-7fd6d4b9b000 r-xp 00000000 fd:03 406557                     /home/django_test/testenv/lib/python3.4/site-packages/numpy/fft/fftpack_lite.cpython-34m.so
+7fd6d4b9b000-7fd6d4d9a000 ---p 00009000 fd:03 406557                     /home/django_test/testenv/lib/python3.4/site-packages/numpy/fft/fftpack_lite.cpython-34m.so
+7fd6d4d9a000-7fd6d4d9b000 rw-p 00008000 fd:03 406557                     /home/django_test/testenv/lib/python3.4/site-packages/numpy/fft/fftpack_lite.cpython-34m.so
+7fd6d4d9b000-7fd6d4e1b000 rw-p 00000000 00:00 0 
+7fd6d4e1b000-7fd6d4e44000 r-xp 00000000 fd:03 405744                     /home/django_test/testenv/lib/python3.4/site-packages/numpy/linalg/_umath_linalg.cpython-34m.so
+7fd6d4e44000-7fd6d5043000 ---p 00029000 fd:03 405744                     /home/django_test/testenv/lib/python3.4/site-packages/numpy/linalg/_umath_linalg.cpython-34m.so
+7fd6d5043000-7fd6d5048000 rw-p 00028000 fd:03 405744                     /home/django_test/testenv/lib/python3.4/site-packages/numpy/linalg/_umath_linalg.cpython-34m.so
+7fd6d5048000-7fd6d504c000 r-xp 00000000 fd:03 405742                     /home/django_test/testenv/lib/python3.4/site-packages/numpy/linalg/lapack_lite.cpython-34m.so
+7fd6d504c000-7fd6d524c000 ---p 00004000 fd:03 405742                     /home/django_test/testenv/lib/python3.4/site-packages/numpy/linalg/lapack_lite.cpython-34m.so
+7fd6d524c000-7fd6d524f000 rw-p 00004000 fd:03 405742                     /home/django_test/testenv/lib/python3.4/site-packages/numpy/linalg/lapack_lite.cpython-34m.so
+7fd6d524f000-7fd6d538f000 rw-p 00000000 00:00 0 
+7fd6d538f000-7fd6d5520000 r-xp 00000000 fd:03 406899                     /home/django_test/testenv/lib/python3.4/site-packages/numpy/core/umath.cpython-34m.so
+7fd6d5520000-7fd6d5720000 ---p 00191000 fd:03 406899                     /home/django_test/testenv/lib/python3.4/site-packages/numpy/core/umath.cpython-34m.so
+7fd6d5720000-7fd6d5726000 rw-p 00191000 fd:03 406899                     /home/django_test/testenv/lib/python3.4/site-packages/numpy/core/umath.cpython-34m.so
+7fd6d5726000-7fd6d5768000 rw-p 00000000 00:00 0 
+7fd6d5768000-7fd6d5769000 ---p 00000000 00:00 0 
+7fd6d5769000-7fd6d5f69000 rw-p 00000000 00:00 0                          [stack:1635]
+7fd6d5f69000-7fd6d6059000 r-xp 00000000 fd:03 406019                     /home/django_test/testenv/lib/python3.4/site-packages/numpy/.libs/libgfortran-ed201abd.so.3.0.0
+7fd6d6059000-7fd6d6258000 ---p 000f0000 fd:03 406019                     /home/django_test/testenv/lib/python3.4/site-packages/numpy/.libs/libgfortran-ed201abd.so.3.0.0
+7fd6d6258000-7fd6d625a000 rw-p 000ef000 fd:03 406019                     /home/django_test/testenv/lib/python3.4/site-packages/numpy/.libs/libgfortran-ed201abd.so.3.0.0
+7fd6d625a000-7fd6d625b000 rw-p 00000000 00:00 0 
+7fd6d625b000-7fd6d6263000 rw-p 000f2000 fd:03 406019                     /home/django_test/testenv/lib/python3.4/site-packages/numpy/.libs/libgfortran-ed201abd.so.3.0.0
+7fd6d6263000-7fd6d643b000 r-xp 00000000 fd:03 406910                     /home/django_test/testenv/lib/python3.4/site-packages/numpy/core/multiarray.cpython-34m.so
+7fd6d643b000-7fd6d663b000 ---p 001d8000 fd:03 406910                     /home/django_test/testenv/lib/python3.4/site-packages/numpy/core/multiarray.cpython-34m.so
+7fd6d663b000-7fd6d6654000 rw-p 001d8000 fd:03 406910                     /home/django_test/testenv/lib/python3.4/site-packages/numpy/core/multiarray.cpython-34m.so
+7fd6d6654000-7fd6d666c000 rw-p 00000000 00:00 0 
+7fd6d666c000-7fd6d6672000 rw-p 001f2000 fd:03 406910                     /home/django_test/testenv/lib/python3.4/site-packages/numpy/core/multiarray.cpython-34m.so
+7fd6d6672000-7fd6d66b2000 rw-p 00000000 00:00 0 
+7fd6d66b2000-7fd6d66b8000 r-xp 00000000 fd:03 919398                     /usr/lib/python3.4/lib-dynload/_csv.cpython-34m-x86_64-linux-gnu.so
+7fd6d66b8000-7fd6d68b7000 ---p 00006000 fd:03 919398                     /usr/lib/python3.4/lib-dynload/_csv.cpython-34m-x86_64-linux-gnu.so
+7fd6d68b7000-7fd6d68b8000 r--p 00005000 fd:03 919398                     /usr/lib/python3.4/lib-dynload/_csv.cpython-34m-x86_64-linux-gnu.so
+7fd6d68b8000-7fd6d68ba000 rw-p 00006000 fd:03 919398                     /usr/lib/python3.4/lib-dynload/_csv.cpython-34m-x86_64-linux-gnu.so
+7fd6d68ba000-7fd6d68bb000 ---p 00000000 00:00 0 
+7fd6d68bb000-7fd6d71fb000 rw-p 00000000 00:00 0                          [stack:1631]
+7fd6d71fb000-7fd6d7236000 r-xp 00000000 fd:03 656538                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libsepol-b4f5b513.so.1
+7fd6d7236000-7fd6d7436000 ---p 0003b000 fd:03 656538                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libsepol-b4f5b513.so.1
+7fd6d7436000-7fd6d7437000 rw-p 0003b000 fd:03 656538                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libsepol-b4f5b513.so.1
+7fd6d7437000-7fd6d7441000 rw-p 00000000 00:00 0 
+7fd6d7441000-7fd6d7443000 rw-p 0003c000 fd:03 656538                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libsepol-b4f5b513.so.1
+7fd6d7443000-7fd6d744c000 r-xp 00000000 fd:03 1847291                    /lib/x86_64-linux-gnu/libcrypt-2.19.so
+7fd6d744c000-7fd6d764c000 ---p 00009000 fd:03 1847291                    /lib/x86_64-linux-gnu/libcrypt-2.19.so
+7fd6d764c000-7fd6d764d000 r--p 00009000 fd:03 1847291                    /lib/x86_64-linux-gnu/libcrypt-2.19.so
+7fd6d764d000-7fd6d764e000 rw-p 0000a000 fd:03 1847291                    /lib/x86_64-linux-gnu/libcrypt-2.19.so
+7fd6d764e000-7fd6d767c000 rw-p 00000000 00:00 0 
+7fd6d767c000-7fd6d7692000 r-xp 00000000 fd:03 656520                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libselinux-cf8f9094.so.1
+7fd6d7692000-7fd6d7891000 ---p 00016000 fd:03 656520                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libselinux-cf8f9094.so.1
+7fd6d7891000-7fd6d7893000 rw-p 00015000 fd:03 656520                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libselinux-cf8f9094.so.1
+7fd6d7893000-7fd6d7894000 rw-p 00000000 00:00 0 
+7fd6d7894000-7fd6d7898000 rw-p 00017000 fd:03 656520                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libselinux-cf8f9094.so.1
+7fd6d7898000-7fd6d78b0000 r-xp 00000000 fd:03 656713                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libsasl2-e96a0dbf.so.2.0.22
+7fd6d78b0000-7fd6d7ab0000 ---p 00018000 fd:03 656713                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libsasl2-e96a0dbf.so.2.0.22
+7fd6d7ab0000-7fd6d7ab1000 rw-p 00018000 fd:03 656713                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libsasl2-e96a0dbf.so.2.0.22
+7fd6d7ab1000-7fd6d7ab3000 rw-p 0001a000 fd:03 656713                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libsasl2-e96a0dbf.so.2.0.22
+7fd6d7ab3000-7fd6d7ac0000 r-xp 00000000 fd:03 656574                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/liblber-2-d7edd0dc.4.so.2.10.7
+7fd6d7ac0000-7fd6d7cc0000 ---p 0000d000 fd:03 656574                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/liblber-2-d7edd0dc.4.so.2.10.7
+7fd6d7cc0000-7fd6d7cc2000 rw-p 0000d000 fd:03 656574                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/liblber-2-d7edd0dc.4.so.2.10.7
+7fd6d7cc2000-7fd6d7cc4000 r-xp 00000000 fd:03 656816                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libkeyutils-1-ff31573b.2.so
+7fd6d7cc4000-7fd6d7ec3000 ---p 00002000 fd:03 656816                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libkeyutils-1-ff31573b.2.so
+7fd6d7ec3000-7fd6d7ec5000 rw-p 00001000 fd:03 656816                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libkeyutils-1-ff31573b.2.so
+7fd6d7ec5000-7fd6d7ecd000 r-xp 00000000 fd:03 656542                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libkrb5support-d7ce89d4.so.0.1
+7fd6d7ecd000-7fd6d80cc000 ---p 00008000 fd:03 656542                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libkrb5support-d7ce89d4.so.0.1
+7fd6d80cc000-7fd6d80cd000 rw-p 00007000 fd:03 656542                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libkrb5support-d7ce89d4.so.0.1
+7fd6d80cd000-7fd6d80d0000 rw-p 00009000 fd:03 656542                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libkrb5support-d7ce89d4.so.0.1
+7fd6d80d0000-7fd6d80e7000 r-xp 00000000 fd:03 1835249                    /lib/x86_64-linux-gnu/libresolv-2.19.so
+7fd6d80e7000-7fd6d82e7000 ---p 00017000 fd:03 1835249                    /lib/x86_64-linux-gnu/libresolv-2.19.so
+7fd6d82e7000-7fd6d82e8000 r--p 00017000 fd:03 1835249                    /lib/x86_64-linux-gnu/libresolv-2.19.so
+7fd6d82e8000-7fd6d82e9000 rw-p 00018000 fd:03 1835249                    /lib/x86_64-linux-gnu/libresolv-2.19.so
+7fd6d82e9000-7fd6d82eb000 rw-p 00000000 00:00 0 
+7fd6d82eb000-7fd6d830f000 r-xp 00000000 fd:03 656702                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libk5crypto-622ef25b.so.3.1
+7fd6d830f000-7fd6d850e000 ---p 00024000 fd:03 656702                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libk5crypto-622ef25b.so.3.1
+7fd6d850e000-7fd6d8514000 rw-p 00023000 fd:03 656702                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libk5crypto-622ef25b.so.3.1
+7fd6d8514000-7fd6d8516000 r-xp 00000000 fd:03 656528                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libcom_err-beb60336.so.2.1
+7fd6d8516000-7fd6d8715000 ---p 00002000 fd:03 656528                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libcom_err-beb60336.so.2.1
+7fd6d8715000-7fd6d8717000 rw-p 00001000 fd:03 656528                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libcom_err-beb60336.so.2.1
+7fd6d8717000-7fd6d87a8000 r-xp 00000000 fd:03 656850                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libkrb5-fb0d2caa.so.3.3
+7fd6d87a8000-7fd6d89a8000 ---p 00091000 fd:03 656850                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libkrb5-fb0d2caa.so.3.3
+7fd6d89a8000-7fd6d89ac000 rw-p 00091000 fd:03 656850                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libkrb5-fb0d2caa.so.3.3
+7fd6d89ac000-7fd6d89cb000 rw-p 00096000 fd:03 656850                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libkrb5-fb0d2caa.so.3.3
+7fd6d89cb000-7fd6d8a19000 r-xp 00000000 fd:03 656704                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libldap_r-2-41a2533b.4.so.2.10.7
+7fd6d8a19000-7fd6d8c19000 ---p 0004e000 fd:03 656704                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libldap_r-2-41a2533b.4.so.2.10.7
+7fd6d8c19000-7fd6d8c1c000 rw-p 0004e000 fd:03 656704                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libldap_r-2-41a2533b.4.so.2.10.7
+7fd6d8c1c000-7fd6d8c1e000 rw-p 00000000 00:00 0 
+7fd6d8c1e000-7fd6d8c33000 rw-p 00051000 fd:03 656704                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libldap_r-2-41a2533b.4.so.2.10.7
+7fd6d8c33000-7fd6d8c5f000 r-xp 00000000 fd:03 656575                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libgssapi_krb5-174f8956.so.2.2
+7fd6d8c5f000-7fd6d8e5f000 ---p 0002c000 fd:03 656575                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libgssapi_krb5-174f8956.so.2.2
+7fd6d8e5f000-7fd6d8e6e000 rw-p 0002c000 fd:03 656575                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libgssapi_krb5-174f8956.so.2.2
+7fd6d8e6e000-7fd6d9094000 r-xp 00000000 fd:03 656516                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libcrypto-1e9dee74.so.1.0.2n
+7fd6d9094000-7fd6d9293000 ---p 00226000 fd:03 656516                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libcrypto-1e9dee74.so.1.0.2n
+7fd6d9293000-7fd6d92ba000 rw-p 00225000 fd:03 656516                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libcrypto-1e9dee74.so.1.0.2n
+7fd6d92ba000-7fd6d92bd000 rw-p 00000000 00:00 0 
+7fd6d92bd000-7fd6d92ee000 rw-p 0024c000 fd:03 656516                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libcrypto-1e9dee74.so.1.0.2n
+7fd6d92ee000-7fd6d935a000 r-xp 00000000 fd:03 656851                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libssl-3309e9a3.so.1.0.2n
+7fd6d935a000-7fd6d9559000 ---p 0006c000 fd:03 656851                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libssl-3309e9a3.so.1.0.2n
+7fd6d9559000-7fd6d9564000 rw-p 0006b000 fd:03 656851                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libssl-3309e9a3.so.1.0.2n
+7fd6d9564000-7fd6d9589000 rw-p 00077000 fd:03 656851                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libssl-3309e9a3.so.1.0.2n
+7fd6d9589000-7fd6d95cc000 r-xp 00000000 fd:03 656657                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libpq-389351b6.so.5.10
+7fd6d95cc000-7fd6d97cc000 ---p 00043000 fd:03 656657                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libpq-389351b6.so.5.10
+7fd6d97cc000-7fd6d97cf000 rw-p 00043000 fd:03 656657                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libpq-389351b6.so.5.10
+7fd6d97cf000-7fd6d97d9000 rw-p 00047000 fd:03 656657                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/.libs/libpq-389351b6.so.5.10
+7fd6d97d9000-7fd6d980a000 r-xp 00000000 fd:03 655918                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/_psycopg.cpython-34m.so
+7fd6d980a000-7fd6d9a09000 ---p 00031000 fd:03 655918                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/_psycopg.cpython-34m.so
+7fd6d9a09000-7fd6d9a10000 rw-p 00030000 fd:03 655918                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/_psycopg.cpython-34m.so
+7fd6d9a10000-7fd6d9a14000 rw-p 000fd000 fd:03 655918                     /home/django_test/testenv/lib/python3.4/site-packages/psycopg2/_psycopg.cpython-34m.so
+7fd6d9a14000-7fd6d9a54000 rw-p 00000000 00:00 0 
+7fd6d9a54000-7fd6d9b08000 r-xp 00000000 fd:03 918196                     /usr/lib/x86_64-linux-gnu/libsqlite3.so.0.8.6
+7fd6d9b08000-7fd6d9d08000 ---p 000b4000 fd:03 918196                     /usr/lib/x86_64-linux-gnu/libsqlite3.so.0.8.6
+7fd6d9d08000-7fd6d9d0a000 r--p 000b4000 fd:03 918196                     /usr/lib/x86_64-linux-gnu/libsqlite3.so.0.8.6
+7fd6d9d0a000-7fd6d9d0c000 rw-p 000b6000 fd:03 918196                     /usr/lib/x86_64-linux-gnu/libsqlite3.so.0.8.6
+7fd6d9d0c000-7fd6d9d0d000 rw-p 00000000 00:00 0 
+7fd6d9d0d000-7fd6d9d1d000 r-xp 00000000 fd:03 919413                     /usr/lib/python3.4/lib-dynload/_sqlite3.cpython-34m-x86_64-linux-gnu.so
+7fd6d9d1d000-7fd6d9f1d000 ---p 00010000 fd:03 919413                     /usr/lib/python3.4/lib-dynload/_sqlite3.cpython-34m-x86_64-linux-gnu.so
+7fd6d9f1d000-7fd6d9f1e000 r--p 00010000 fd:03 919413                     /usr/lib/python3.4/lib-dynload/_sqlite3.cpython-34m-x86_64-linux-gnu.so
+7fd6d9f1e000-7fd6d9f21000 rw-p 00011000 fd:03 919413                     /usr/lib/python3.4/lib-dynload/_sqlite3.cpython-34m-x86_64-linux-gnu.so
+7fd6d9f22000-7fd6da4a2000 rw-p 00000000 00:00 0 
+7fd6da4a2000-7fd6da4a6000 r-xp 00000000 fd:03 671931                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libwebpdemux-c8ebe823.so.2.0.3
+7fd6da4a6000-7fd6da6a5000 ---p 00004000 fd:03 671931                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libwebpdemux-c8ebe823.so.2.0.3
+7fd6da6a5000-7fd6da6a6000 rw-p 00003000 fd:03 671931                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libwebpdemux-c8ebe823.so.2.0.3
+7fd6da6a6000-7fd6da6a8000 rw-p 00016000 fd:03 671931                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libwebpdemux-c8ebe823.so.2.0.3
+7fd6da6a8000-7fd6da6b1000 r-xp 00000000 fd:03 671929                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libwebpmux-26347042.so.3.0.1
+7fd6da6b1000-7fd6da8b1000 ---p 00009000 fd:03 671929                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libwebpmux-26347042.so.3.0.1
+7fd6da8b1000-7fd6da8b2000 rw-p 00009000 fd:03 671929                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libwebpmux-26347042.so.3.0.1
+7fd6da8b2000-7fd6da8b4000 rw-p 00033000 fd:03 671929                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libwebpmux-26347042.so.3.0.1
+7fd6da8b4000-7fd6da91a000 r-xp 00000000 fd:03 671932                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libwebp-186dc9a0.so.7.0.1
+7fd6da91a000-7fd6dab19000 ---p 00066000 fd:03 671932                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libwebp-186dc9a0.so.7.0.1
+7fd6dab19000-7fd6dab1a000 rw-p 00065000 fd:03 671932                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libwebp-186dc9a0.so.7.0.1
+7fd6dab1a000-7fd6dab1c000 rw-p 00000000 00:00 0 
+7fd6dab1c000-7fd6dab1d000 rw-p 00347000 fd:03 671932                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libwebp-186dc9a0.so.7.0.1
+7fd6dab1d000-7fd6dab21000 r-xp 00000000 fd:03 671781                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/_webp.cpython-34m.so
+7fd6dab21000-7fd6dad21000 ---p 00004000 fd:03 671781                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/_webp.cpython-34m.so
+7fd6dad21000-7fd6dad22000 rw-p 00004000 fd:03 671781                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/_webp.cpython-34m.so
+7fd6dad22000-7fd6dad26000 rw-p 00012000 fd:03 671781                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/_webp.cpython-34m.so
+7fd6dad26000-7fd6dae66000 rw-p 00000000 00:00 0 
+7fd6dae66000-7fd6dae8a000 r-xp 00000000 fd:03 671924                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/liblzma-f444c404.so.5.2.2
+7fd6dae8a000-7fd6db08a000 ---p 00024000 fd:03 671924                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/liblzma-f444c404.so.5.2.2
+7fd6db08a000-7fd6db08b000 rw-p 00024000 fd:03 671924                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/liblzma-f444c404.so.5.2.2
+7fd6db08b000-7fd6db08c000 rw-p 000d3000 fd:03 671924                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/liblzma-f444c404.so.5.2.2
+7fd6db08c000-7fd6db093000 r-xp 00000000 fd:03 1847301                    /lib/x86_64-linux-gnu/librt-2.19.so
+7fd6db093000-7fd6db292000 ---p 00007000 fd:03 1847301                    /lib/x86_64-linux-gnu/librt-2.19.so
+7fd6db292000-7fd6db293000 r--p 00006000 fd:03 1847301                    /lib/x86_64-linux-gnu/librt-2.19.so
+7fd6db293000-7fd6db294000 rw-p 00007000 fd:03 1847301                    /lib/x86_64-linux-gnu/librt-2.19.so
+7fd6db294000-7fd6db307000 r-xp 00000000 fd:03 671925                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libtiff-16d54532.so.5.3.0
+7fd6db307000-7fd6db506000 ---p 00073000 fd:03 671925                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libtiff-16d54532.so.5.3.0
+7fd6db506000-7fd6db50a000 rw-p 00072000 fd:03 671925                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libtiff-16d54532.so.5.3.0
+7fd6db50a000-7fd6db512000 rw-p 001ac000 fd:03 671925                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libtiff-16d54532.so.5.3.0
+7fd6db512000-7fd6db526000 r-xp 00000000 fd:03 671928                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libz-a147dcb0.so.1.2.3
+7fd6db526000-7fd6db725000 ---p 00014000 fd:03 671928                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libz-a147dcb0.so.1.2.3
+7fd6db725000-7fd6db726000 rw-p 00013000 fd:03 671928                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libz-a147dcb0.so.1.2.3
+7fd6db726000-7fd6db727000 rw-p 00015000 fd:03 671928                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libz-a147dcb0.so.1.2.3
+7fd6db727000-7fd6db76e000 r-xp 00000000 fd:03 671922                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libopenjp2-59185378.so.2.1.0
+7fd6db76e000-7fd6db96e000 ---p 00047000 fd:03 671922                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libopenjp2-59185378.so.2.1.0
+7fd6db96e000-7fd6db970000 rw-p 00047000 fd:03 671922                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libopenjp2-59185378.so.2.1.0
+7fd6db970000-7fd6db972000 rw-p 00052000 fd:03 671922                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libopenjp2-59185378.so.2.1.0
+7fd6db972000-7fd6db9ac000 r-xp 00000000 fd:03 671926                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libjpeg-bcb94a84.so.9.2.0
+7fd6db9ac000-7fd6dbbac000 ---p 0003a000 fd:03 671926                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libjpeg-bcb94a84.so.9.2.0
+7fd6dbbac000-7fd6dbbad000 rw-p 0003a000 fd:03 671926                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libjpeg-bcb94a84.so.9.2.0
+7fd6dbbad000-7fd6dbbaf000 rw-p 00146000 fd:03 671926                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/.libs/libjpeg-bcb94a84.so.9.2.0
+7fd6dbbaf000-7fd6dbc28000 r-xp 00000000 fd:03 671790                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/_imaging.cpython-34m.so
+7fd6dbc28000-7fd6dbe27000 ---p 00079000 fd:03 671790                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/_imaging.cpython-34m.so
+7fd6dbe27000-7fd6dbe2e000 rw-p 00078000 fd:03 671790                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/_imaging.cpython-34m.so
+7fd6dbe2e000-7fd6dbe3d000 rw-p 001fb000 fd:03 671790                     /home/django_test/testenv/lib/python3.4/site-packages/PIL/_imaging.cpython-34m.so
+7fd6dbe3d000-7fd6dbf3d000 rw-p 00000000 00:00 0 
+7fd6dbf3d000-7fd6dbf3f000 r-xp 00000000 fd:03 671471                     /home/django_test/testenv/lib/python3.4/site-packages/markupsafe/_speedups.cpython-34m.so
+7fd6dbf3f000-7fd6dc13e000 ---p 00002000 fd:03 671471                     /home/django_test/testenv/lib/python3.4/site-packages/markupsafe/_speedups.cpython-34m.so
+7fd6dc13e000-7fd6dc13f000 r--p 00001000 fd:03 671471                     /home/django_test/testenv/lib/python3.4/site-packages/markupsafe/_speedups.cpython-34m.so
+7fd6dc13f000-7fd6dc140000 rw-p 00002000 fd:03 671471                     /home/django_test/testenv/lib/python3.4/site-packages/markupsafe/_speedups.cpython-34m.so
+7fd6dc140000-7fd6dc2c0000 rw-p 00000000 00:00 0 
+7fd6dc2c0000-7fd6dc2c4000 r-xp 00000000 fd:03 1835303                    /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7fd6dc2c4000-7fd6dc4c3000 ---p 00004000 fd:03 1835303                    /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7fd6dc4c3000-7fd6dc4c4000 r--p 00003000 fd:03 1835303                    /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7fd6dc4c4000-7fd6dc4c5000 rw-p 00004000 fd:03 1835303                    /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7fd6dc4c5000-7fd6dc4cc000 r-xp 00000000 fd:03 918188                     /usr/lib/x86_64-linux-gnu/libffi.so.6.0.1
+7fd6dc4cc000-7fd6dc6cb000 ---p 00007000 fd:03 918188                     /usr/lib/x86_64-linux-gnu/libffi.so.6.0.1
+7fd6dc6cb000-7fd6dc6cc000 r--p 00006000 fd:03 918188                     /usr/lib/x86_64-linux-gnu/libffi.so.6.0.1
+7fd6dc6cc000-7fd6dc6cd000 rw-p 00007000 fd:03 918188                     /usr/lib/x86_64-linux-gnu/libffi.so.6.0.1
+7fd6dc6cd000-7fd6dc6e5000 r-xp 00000000 fd:03 919382                     /usr/lib/python3.4/lib-dynload/_ctypes.cpython-34m-x86_64-linux-gnu.so
+7fd6dc6e5000-7fd6dc8e4000 ---p 00018000 fd:03 919382                     /usr/lib/python3.4/lib-dynload/_ctypes.cpython-34m-x86_64-linux-gnu.so
+7fd6dc8e4000-7fd6dc8e5000 r--p 00017000 fd:03 919382                     /usr/lib/python3.4/lib-dynload/_ctypes.cpython-34m-x86_64-linux-gnu.so
+7fd6dc8e5000-7fd6dc8e9000 rw-p 00018000 fd:03 919382                     /usr/lib/python3.4/lib-dynload/_ctypes.cpython-34m-x86_64-linux-gnu.so
+7fd6dc8e9000-7fd6dc969000 rw-p 00000000 00:00 0 
+7fd6dc969000-7fd6dc9be000 r-xp 00000000 fd:03 1835201                    /lib/x86_64-linux-gnu/libssl.so.1.0.0
+7fd6dc9be000-7fd6dcbbe000 ---p 00055000 fd:03 1835201                    /lib/x86_64-linux-gnu/libssl.so.1.0.0
+7fd6dcbbe000-7fd6dcbc1000 r--p 00055000 fd:03 1835201                    /lib/x86_64-linux-gnu/libssl.so.1.0.0
+7fd6dcbc1000-7fd6dcbc8000 rw-p 00058000 fd:03 1835201                    /lib/x86_64-linux-gnu/libssl.so.1.0.0
+7fd6dcbc8000-7fd6dcbdb000 r-xp 00000000 fd:03 918681                     /usr/lib/python3.4/lib-dynload/_ssl.cpython-34m-x86_64-linux-gnu.so
+7fd6dcbdb000-7fd6dcdda000 ---p 00013000 fd:03 918681                     /usr/lib/python3.4/lib-dynload/_ssl.cpython-34m-x86_64-linux-gnu.so
+7fd6dcdda000-7fd6dcddb000 r--p 00012000 fd:03 918681                     /usr/lib/python3.4/lib-dynload/_ssl.cpython-34m-x86_64-linux-gnu.so
+7fd6dcddb000-7fd6dcddf000 rw-p 00013000 fd:03 918681                     /usr/lib/python3.4/lib-dynload/_ssl.cpython-34m-x86_64-linux-gnu.so
+7fd6dcddf000-7fd6dce9f000 rw-p 00000000 00:00 0 
+7fd6dcea0000-7fd6dcfe0000 rw-p 00000000 00:00 0 
+7fd6dcfe0000-7fd6dcfef000 r-xp 00000000 fd:03 1835175                    /lib/x86_64-linux-gnu/libbz2.so.1.0.4
+7fd6dcfef000-7fd6dd1ee000 ---p 0000f000 fd:03 1835175                    /lib/x86_64-linux-gnu/libbz2.so.1.0.4
+7fd6dd1ee000-7fd6dd1ef000 r--p 0000e000 fd:03 1835175                    /lib/x86_64-linux-gnu/libbz2.so.1.0.4
+7fd6dd1ef000-7fd6dd1f0000 rw-p 0000f000 fd:03 1835175                    /lib/x86_64-linux-gnu/libbz2.so.1.0.4
+7fd6dd1f0000-7fd6dd1f3000 r-xp 00000000 fd:03 919406                     /usr/lib/python3.4/lib-dynload/_bz2.cpython-34m-x86_64-linux-gnu.so
+7fd6dd1f3000-7fd6dd3f2000 ---p 00003000 fd:03 919406                     /usr/lib/python3.4/lib-dynload/_bz2.cpython-34m-x86_64-linux-gnu.so
+7fd6dd3f2000-7fd6dd3f3000 r--p 00002000 fd:03 919406                     /usr/lib/python3.4/lib-dynload/_bz2.cpython-34m-x86_64-linux-gnu.so
+7fd6dd3f3000-7fd6dd3f4000 rw-p 00003000 fd:03 919406                     /usr/lib/python3.4/lib-dynload/_bz2.cpython-34m-x86_64-linux-gnu.so
+7fd6dd3f4000-7fd6dd474000 rw-p 00000000 00:00 0 
+7fd6dd474000-7fd6dd627000 r-xp 00000000 fd:03 1835202                    /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+7fd6dd627000-7fd6dd826000 ---p 001b3000 fd:03 1835202                    /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+7fd6dd826000-7fd6dd841000 r--p 001b2000 fd:03 1835202                    /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+7fd6dd841000-7fd6dd84c000 rw-p 001cd000 fd:03 1835202                    /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+7fd6dd84c000-7fd6dd850000 rw-p 00000000 00:00 0 
+7fd6dd850000-7fd6dd855000 r-xp 00000000 fd:03 918680                     /usr/lib/python3.4/lib-dynload/_hashlib.cpython-34m-x86_64-linux-gnu.so
+7fd6dd855000-7fd6dda54000 ---p 00005000 fd:03 918680                     /usr/lib/python3.4/lib-dynload/_hashlib.cpython-34m-x86_64-linux-gnu.so
+7fd6dda54000-7fd6dda55000 r--p 00004000 fd:03 918680                     /usr/lib/python3.4/lib-dynload/_hashlib.cpython-34m-x86_64-linux-gnu.so
+7fd6dda55000-7fd6dda56000 rw-p 00005000 fd:03 918680                     /usr/lib/python3.4/lib-dynload/_hashlib.cpython-34m-x86_64-linux-gnu.so
+7fd6dda56000-7fd6dda5f000 r-xp 00000000 fd:03 919383                     /usr/lib/python3.4/lib-dynload/_json.cpython-34m-x86_64-linux-gnu.so
+7fd6dda5f000-7fd6ddc5e000 ---p 00009000 fd:03 919383                     /usr/lib/python3.4/lib-dynload/_json.cpython-34m-x86_64-linux-gnu.so
+7fd6ddc5e000-7fd6ddc5f000 r--p 00008000 fd:03 919383                     /usr/lib/python3.4/lib-dynload/_json.cpython-34m-x86_64-linux-gnu.so
+7fd6ddc5f000-7fd6ddc60000 rw-p 00009000 fd:03 919383                     /usr/lib/python3.4/lib-dynload/_json.cpython-34m-x86_64-linux-gnu.so
+7fd6ddc60000-7fd6ddd20000 rw-p 00000000 00:00 0 
+7fd6ddd20000-7fd6ddd24000 r-xp 00000000 fd:03 919404                     /usr/lib/python3.4/lib-dynload/termios.cpython-34m-x86_64-linux-gnu.so
+7fd6ddd24000-7fd6ddf23000 ---p 00004000 fd:03 919404                     /usr/lib/python3.4/lib-dynload/termios.cpython-34m-x86_64-linux-gnu.so
+7fd6ddf23000-7fd6ddf24000 r--p 00003000 fd:03 919404                     /usr/lib/python3.4/lib-dynload/termios.cpython-34m-x86_64-linux-gnu.so
+7fd6ddf24000-7fd6ddf26000 rw-p 00004000 fd:03 919404                     /usr/lib/python3.4/lib-dynload/termios.cpython-34m-x86_64-linux-gnu.so
+7fd6ddf26000-7fd6de066000 rw-p 00000000 00:00 0 
+7fd6de087000-7fd6de107000 rw-p 00000000 00:00 0 
+7fd6de107000-7fd6de108000 r-xp 00000000 fd:03 918683                     /usr/lib/python3.4/lib-dynload/_opcode.cpython-34m-x86_64-linux-gnu.so
+7fd6de108000-7fd6de307000 ---p 00001000 fd:03 918683                     /usr/lib/python3.4/lib-dynload/_opcode.cpython-34m-x86_64-linux-gnu.so
+7fd6de307000-7fd6de308000 r--p 00000000 fd:03 918683                     /usr/lib/python3.4/lib-dynload/_opcode.cpython-34m-x86_64-linux-gnu.so
+7fd6de308000-7fd6de309000 rw-p 00001000 fd:03 918683                     /usr/lib/python3.4/lib-dynload/_opcode.cpython-34m-x86_64-linux-gnu.so
+7fd6de309000-7fd6de409000 rw-p 00000000 00:00 0 
+7fd6de409000-7fd6de802000 r--p 00000000 fd:03 922196                     /usr/lib/locale/locale-archive
+7fd6de802000-7fd6de907000 r-xp 00000000 fd:03 1847294                    /lib/x86_64-linux-gnu/libm-2.19.so
+7fd6de907000-7fd6deb06000 ---p 00105000 fd:03 1847294                    /lib/x86_64-linux-gnu/libm-2.19.so
+7fd6deb06000-7fd6deb07000 r--p 00104000 fd:03 1847294                    /lib/x86_64-linux-gnu/libm-2.19.so
+7fd6deb07000-7fd6deb08000 rw-p 00105000 fd:03 1847294                    /lib/x86_64-linux-gnu/libm-2.19.so
+7fd6deb08000-7fd6deb20000 r-xp 00000000 fd:03 1835294                    /lib/x86_64-linux-gnu/libz.so.1.2.8
+7fd6deb20000-7fd6ded1f000 ---p 00018000 fd:03 1835294                    /lib/x86_64-linux-gnu/libz.so.1.2.8
+7fd6ded1f000-7fd6ded20000 r--p 00017000 fd:03 1835294                    /lib/x86_64-linux-gnu/libz.so.1.2.8
+7fd6ded20000-7fd6ded21000 rw-p 00018000 fd:03 1835294                    /lib/x86_64-linux-gnu/libz.so.1.2.8
+7fd6ded21000-7fd6ded48000 r-xp 00000000 fd:03 1835278                    /lib/x86_64-linux-gnu/libexpat.so.1.6.0
+7fd6ded48000-7fd6def48000 ---p 00027000 fd:03 1835278                    /lib/x86_64-linux-gnu/libexpat.so.1.6.0
+7fd6def48000-7fd6def4a000 r--p 00027000 fd:03 1835278                    /lib/x86_64-linux-gnu/libexpat.so.1.6.0
+7fd6def4a000-7fd6def4b000 rw-p 00029000 fd:03 1835278                    /lib/x86_64-linux-gnu/libexpat.so.1.6.0
+7fd6def4b000-7fd6def4d000 r-xp 00000000 fd:03 1847307                    /lib/x86_64-linux-gnu/libutil-2.19.so
+7fd6def4d000-7fd6df14c000 ---p 00002000 fd:03 1847307                    /lib/x86_64-linux-gnu/libutil-2.19.so
+7fd6df14c000-7fd6df14d000 r--p 00001000 fd:03 1847307                    /lib/x86_64-linux-gnu/libutil-2.19.so
+7fd6df14d000-7fd6df14e000 rw-p 00002000 fd:03 1847307                    /lib/x86_64-linux-gnu/libutil-2.19.so
+7fd6df14e000-7fd6df151000 r-xp 00000000 fd:03 1847304                    /lib/x86_64-linux-gnu/libdl-2.19.so
+7fd6df151000-7fd6df350000 ---p 00003000 fd:03 1847304                    /lib/x86_64-linux-gnu/libdl-2.19.so
+7fd6df350000-7fd6df351000 r--p 00002000 fd:03 1847304                    /lib/x86_64-linux-gnu/libdl-2.19.so
+7fd6df351000-7fd6df352000 rw-p 00003000 fd:03 1847304                    /lib/x86_64-linux-gnu/libdl-2.19.so
+7fd6df352000-7fd6df510000 r-xp 00000000 fd:03 1847308                    /lib/x86_64-linux-gnu/libc-2.19.so
+7fd6df510000-7fd6df710000 ---p 001be000 fd:03 1847308                    /lib/x86_64-linux-gnu/libc-2.19.so
+7fd6df710000-7fd6df714000 r--p 001be000 fd:03 1847308                    /lib/x86_64-linux-gnu/libc-2.19.so
+7fd6df714000-7fd6df716000 rw-p 001c2000 fd:03 1847308                    /lib/x86_64-linux-gnu/libc-2.19.so
+7fd6df716000-7fd6df71b000 rw-p 00000000 00:00 0 
+7fd6df71b000-7fd6df734000 r-xp 00000000 fd:03 1847300                    /lib/x86_64-linux-gnu/libpthread-2.19.so
+7fd6df734000-7fd6df933000 ---p 00019000 fd:03 1847300                    /lib/x86_64-linux-gnu/libpthread-2.19.so
+7fd6df933000-7fd6df934000 r--p 00018000 fd:03 1847300                    /lib/x86_64-linux-gnu/libpthread-2.19.so
+7fd6df934000-7fd6df935000 rw-p 00019000 fd:03 1847300                    /lib/x86_64-linux-gnu/libpthread-2.19.so
+7fd6df935000-7fd6df939000 rw-p 00000000 00:00 0 
+7fd6df939000-7fd6df95c000 r-xp 00000000 fd:03 1847297                    /lib/x86_64-linux-gnu/ld-2.19.so
+7fd6df978000-7fd6df987000 r--s 003aa000 fd:03 403866                     /home/django_test/testenv/lib/python3.4/site-packages/konlpy/java/twitter-korean-text-2.4.3.jar
+7fd6df987000-7fd6df98e000 r--s 0003c000 fd:03 403863                     /home/django_test/testenv/lib/python3.4/site-packages/konlpy/java/snakeyaml-1.12.jar
+7fd6df98e000-7fd6df9ce000 rw-p 00000000 00:00 0 
+7fd6df9d0000-7fd6df9d1000 rw-p 00000000 00:00 0 
+7fd6df9d1000-7fd6df9d2000 r--s 00006000 fd:03 403869                     /home/django_test/testenv/lib/python3.4/site-packages/konlpy/java/twitter-text-1.10.1.jar
+7fd6df9d2000-7fd6df9d3000 r--s 00001000 fd:03 403867                     /home/django_test/testenv/lib/python3.4/site-packages/konlpy/java/shineware-ds-1.0.jar
+7fd6df9d3000-7fd6df9d4000 r--s 00004000 fd:03 403861                     /home/django_test/testenv/lib/python3.4/site-packages/konlpy/java/shineware-common-2.0.jar
+7fd6df9d4000-7fd6df9d5000 r--s 00006000 fd:03 403862                     /home/django_test/testenv/lib/python3.4/site-packages/konlpy/java/komoran-2.4-e.jar
+7fd6df9d5000-7fd6df9d8000 r--s 0075b000 fd:03 403865                     /home/django_test/testenv/lib/python3.4/site-packages/konlpy/java/kkma-2.0.jar
+7fd6df9d8000-7fd6df9dc000 r--s 00025000 fd:03 403868                     /home/django_test/testenv/lib/python3.4/site-packages/konlpy/java/jhannanum-0.8.4.jar
+7fd6df9dc000-7fd6df9df000 r--s 0000f000 fd:03 1071819                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/icedtea-sound.jar
+7fd6df9df000-7fd6df9e3000 r--s 00085000 fd:03 1071817                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/localedata.jar
+7fd6df9e3000-7fd6df9e7000 r--s 00035000 fd:03 1071820                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/sunjce_provider.jar
+7fd6df9e7000-7fd6df9e9000 r--s 00006000 fd:03 936839                     /usr/share/java/java-atk-wrapper.jar
+7fd6df9e9000-7fd6df9ec000 r--s 0003d000 fd:03 1071818                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/sunpkcs11.jar
+7fd6df9ec000-7fd6dfb45000 rw-p 00000000 00:00 0 
+7fd6dfb45000-7fd6dfb46000 r--s 00002000 fd:03 1071821                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/dnsns.jar
+7fd6dfb46000-7fd6dfb48000 r--s 00012000 fd:03 1071822                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext/zipfs.jar
+7fd6dfb48000-7fd6dfb50000 rw-s 00000000 fd:03 403696                     /tmp/hsperfdata_root/1625
+7fd6dfb50000-7fd6dfb51000 rw-p 00000000 00:00 0 
+7fd6dfb51000-7fd6dfb52000 r--p 00000000 00:00 0 
+7fd6dfb52000-7fd6dfb53000 rw-p 00000000 00:00 0 
+7fd6dfb53000-7fd6dfb54000 rwxp 00000000 00:00 0 
+7fd6dfb54000-7fd6dfb5b000 r--s 00000000 fd:03 926732                     /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+7fd6dfb5b000-7fd6dfb5c000 r--p 00022000 fd:03 1847297                    /lib/x86_64-linux-gnu/ld-2.19.so
+7fd6dfb5c000-7fd6dfb5d000 rw-p 00023000 fd:03 1847297                    /lib/x86_64-linux-gnu/ld-2.19.so
+7fd6dfb5d000-7fd6dfb5e000 rw-p 00000000 00:00 0 
+7ffff0926000-7ffff0947000 rw-p 00000000 00:00 0                          [stack]
+7ffff09fc000-7ffff09fe000 r-xp 00000000 00:00 0                          [vdso]
+7ffff09fe000-7ffff0a00000 r--p 00000000 00:00 0                          [vvar]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF8 -ea -Xmx768m 
+java_command: <unknown>
+Launcher Type: generic
+
+Environment Variables:
+PATH=/home/django_test/testenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+SHELL=/bin/bash
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x9635e0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x9635e0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x7d5d50], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: [libjvm.so+0x7d5d50], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGXFSZ: [libjvm.so+0x7d5d50], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGILL: [libjvm.so+0x7d5d50], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x7d5e80], sa_mask[0]=0x00000000, sa_flags=0x10000004
+SIGHUP: [libjvm.so+0x7d5dd0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGINT: [libjvm.so+0x7d5dd0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGTERM: [libjvm.so+0x7d5dd0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGQUIT: [libjvm.so+0x7d5dd0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGTRAP: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+
+
+---------------  S Y S T E M  ---------------
+
+OS:Ubuntu 14.04 (trusty)
+uname:Linux 3.16.0-30-generic #40~14.04.1-Ubuntu SMP Thu Jan 15 17:43:14 UTC 2015 x86_64
+libc:glibc 2.19 NPTL 2.19 
+rlimit: STACK 8192k, CORE infinity, NPROC 15724, NOFILE 4096, AS infinity
+load average:0.10 0.05 0.05
+
+/proc/meminfo:
+MemTotal:        4047900 kB
+MemFree:         1810580 kB
+MemAvailable:    3333460 kB
+Buffers:          224164 kB
+Cached:          1394968 kB
+SwapCached:            0 kB
+Active:          1328416 kB
+Inactive:         686088 kB
+Active(anon):     396072 kB
+Inactive(anon):      572 kB
+Active(file):     932344 kB
+Inactive(file):   685516 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:       1952764 kB
+SwapFree:        1952764 kB
+Dirty:               240 kB
+Writeback:             0 kB
+AnonPages:        395416 kB
+Mapped:           128552 kB
+Shmem:              1228 kB
+Slab:             164920 kB
+SReclaimable:     147928 kB
+SUnreclaim:        16992 kB
+KernelStack:        3808 kB
+PageTables:        13784 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     3976712 kB
+Committed_AS:    1521296 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:       12296 kB
+VmallocChunk:   34359689804 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:    122880 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:       57216 kB
+DirectMap2M:     4136960 kB
+
+
+CPU:total 2 (initial active 2) (2 cores per cpu, 1 threads per core) family 6 model 6 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, popcnt, tsc
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 6
+model name	: QEMU Virtual CPU version 2.4.1
+stepping	: 3
+microcode	: 0x1
+cpu MHz		: 2493.990
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 2
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pse36 clflush mmx fxsr sse sse2 ht syscall nx lm rep_good nopl pni cx16 x2apic popcnt hypervisor lahf_lm
+bogomips	: 4987.98
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 40 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 6
+model name	: QEMU Virtual CPU version 2.4.1
+stepping	: 3
+microcode	: 0x1
+cpu MHz		: 2493.990
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 2
+core id		: 1
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pse36 clflush mmx fxsr sse sse2 ht syscall nx lm rep_good nopl pni cx16 x2apic popcnt hypervisor lahf_lm
+bogomips	: 4987.98
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 40 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 4047900k(1810580k free), swap 1952764k(1952764k free)
+
+vm_info: OpenJDK 64-Bit Server VM (24.151-b01) for linux-amd64 JRE (1.7.0_151-b01), built on Nov 23 2017 15:24:35 by "buildd" with gcc 4.8.4
+
+time: Tue Feb 27 23:32:32 2018
+elapsed time: 9 seconds
+
