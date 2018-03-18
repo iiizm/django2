@@ -1,6 +1,7 @@
 import requests
 import pprint
 import json
+import re
 
 def define(sort, article_count, keyword):
     headers = {'Content-Type': 'application/json; charset=utf-8',
@@ -65,6 +66,10 @@ def list(result):
         url = (result.json()['documents'][i]['url'])
         title = (result.json()['documents'][i]['title'])
         content = (result.json()['documents'][i]['contents'])
+        title = re.sub('[a-zA-Z]', '', title)
+        title = re.sub('[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]', '', title)
+        content = re.sub('[a-zA-Z]', '', content)
+        content = re.sub('[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]', '', content)
         row = [url, title, content]
         list.append(row)
     return list

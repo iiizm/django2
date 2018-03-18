@@ -4,6 +4,7 @@ import urllib.request
 import ast
 import pprint
 import json
+import re
 
 client_id = "Iybik9u8bJ6S9cZLHzWx"
 client_secret = "QcrgPnh4oi"
@@ -106,6 +107,10 @@ def list(result):
         url = (result['items'][i]['link'])
         title = (result['items'][i]['title'])
         content = (result['items'][i]['description'])
+        title = re.sub('[a-zA-Z]', '', title)
+        title = re.sub('[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]', '', title)
+        content = re.sub('[a-zA-Z]', '', content)
+        content = re.sub('[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]', '', content)
         row = [url, title, content]
         list.append(row)
     return list

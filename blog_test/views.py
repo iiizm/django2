@@ -270,7 +270,6 @@ def export_csv(request, pk):
 
     for row in csv_list:
         writer.writerow(row)
-
     return response
 
 def result_detail(request, pk):
